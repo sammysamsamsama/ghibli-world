@@ -1,0 +1,565 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+<title>Campaign World</title><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; --title-bar-height:20px; }
+.mac-os-11 { --title-bar-height:28px; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+body { margin: 0px; padding: 0px; height: auto; bottom: 0px; top: 0px; left: 0px; right: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; tab-size: 4; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 36px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+.typora-export .task-list-item input { pointer-events: none; }
+@media screen and (max-width: 500px) {
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+  .CodeMirror-sizer { margin-left: 0px !important; }
+  .CodeMirror-gutters { display: none !important; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
+button, input, select, textarea { color: inherit; font: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px; }
+tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right: 0px; background-color: inherit; }
+.CodeMirror-linenumber { user-select: none; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
+.md-diagram-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li blockquote { margin: 1rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print {
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
+  #write { margin-top: 0px; padding-top: 0px; border-color: transparent !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  .typora-export #write { break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+  .is-mac table { break-inside: avoid; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+#write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+.MathJax_ref { fill: currentcolor; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) {
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.8; font-family: var(--monospace); }
+code { text-align: left; vertical-align: initial; }
+a.md-print-anchor { white-space: pre !important; border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
+.md-inline-math .MathJax_SVG .noError { display: none !important; }
+.html-for-mac .inline-math-svg .MathJax_SVG { vertical-align: 0.2px; }
+.md-math-block .MathJax_SVG_Display { text-align: center; margin: 0px; position: relative; text-indent: 0px; max-width: none; max-height: none; min-height: 0px; min-width: 100%; width: auto; overflow-y: hidden; display: block !important; }
+.MathJax_SVG_Display, .md-inline-math .MathJax_SVG_Display { width: auto; margin: inherit; display: inline-block !important; }
+.MathJax_SVG .MJX-monospace { font-family: var(--monospace); }
+.MathJax_SVG .MJX-sans-serif { font-family: sans-serif; }
+.MathJax_SVG { display: inline; font-style: normal; font-weight: 400; line-height: normal; zoom: 90%; text-indent: 0px; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; overflow-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0px; min-height: 0px; border: 0px; padding: 0px; margin: 0px; }
+.MathJax_SVG * { transition: none 0s ease 0s; }
+.MathJax_SVG_Display svg { vertical-align: middle !important; margin-bottom: 0px !important; margin-top: 0px !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+mark { background: rgb(255, 255, 0); color: rgb(0, 0, 0); }
+.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
+mark .md-meta { color: rgb(0, 0, 0); opacity: 0.3 !important; }
+@media print {
+  .typora-export h1, .typora-export h2, .typora-export h3, .typora-export h4, .typora-export h5, .typora-export h6 { break-inside: avoid; }
+}
+.md-diagram-panel .messageText { stroke: none !important; }
+.md-diagram-panel .start-state { fill: var(--node-fill); }
+.md-diagram-panel .edgeLabel rect { opacity: 1 !important; }
+.md-require-zoom-fix foreignobject { font-size: var(--mermaid-font-zoom); }
+
+
+
+
+
+
+
+
+
+/** - Breaks - **/
+hr {
+  column-span: all;
+  margin: 5rem auto;
+  /* D&D style arrow */
+  width: 0; 
+  height: 0; 
+  border-top: 0.25rem solid transparent;
+  border-bottom: 0.25rem solid transparent;
+  border-left: 15cm solid var(--red);
+  border-right: none;
+}
+/** - Headings - **/
+h1, h2, h3, h4, h5, h6, 
+.cm-header {
+  break-after: avoid-column;
+
+  margin: 0;
+  margin-block-start: 0.8em;
+  margin-block-end: 0.2em;
+
+  color: var(--red);
+}
+h1, h2, h3, h4, 
+.cm-header1, .cm-header2, .cm-header3, .cm-header4 {
+  font-family: "Crimson Text", serif;
+  font-variant: small-caps;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+h1, 
+.cm-header1 {
+  font-size: 3rem;
+}
+
+h2, 
+.cm-header2 {
+  font-size: 2rem;
+}
+
+h3, 
+.cm-header3 {
+  font-size: 1.5rem;
+}
+
+h4, 
+.cm-header4 {
+  font-size: 1.5rem;
+  border-bottom: 2px solid var(--yellow);
+}
+
+h5, 
+.cm-header5 {
+  font-size: 1.2rem;
+}
+
+h6, 
+.cm-header6 {
+  font-size: 1rem;
+}
+
+/** Font setting **/
+p {
+  margin-block-start: 0.2em;
+  margin-block-end: 0.8em;
+  min-width: 100%;
+}
+
+/** Links **/
+a {
+  color: var(--black);
+  text-decoration: underline;
+  text-decoration-color: var(--yellow);
+}
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+  color: var(--red);
+  text-decoration-color: var(--red);
+}
+a:hover {
+  color: var(--red);
+}
+a:visited {
+  color: var(--yellow);
+}
+a:active {
+  color: var(--red);
+}
+
+/** Other **/
+.md-footnote, sup.md-footnote {
+  color: var(--red);
+  background-color: rgba(0,0,0,0);
+}
+
+/** Emphasis **/
+del {
+  text-decoration-color: var(--red);
+}
+u {
+  
+}
+mark {
+  background-color: var(--green);
+}
+::spelling-error {
+  color: var(--red);
+}
+/** Blocks **/
+blockquote {
+  break-inside: avoid;
+  margin: 5mm 0;
+  padding: 4mm;
+  
+  background-color: var(--green);
+  border-top: 5px solid var(--red);
+  border-bottom: 5px solid var(--red);
+}
+blockquote > h4, blockquote > h3 {
+  margin-block-start: 0.2em;
+}
+
+/** Tables **/
+figure {
+  margin: 0;
+  width: 100%;
+}
+table {
+  border-collapse: collapse;
+  text-align: center;
+  margin: 0;
+    width: 100%;
+}
+th {
+  color: white;
+  background-color: var(--red);
+  padding: 0.2rem 0.5rem;
+}
+td {
+  border: none;
+  background: var(--green);
+  padding: 0.5rem;
+}
+.CodeMirror {
+	width: 100%;
+	height: 100%;
+	background-color: var(--offwhite);
+}
+
+.CodeMirror-linenumber {
+	color: var(--red);
+}
+
+
+.CodeMirror * {
+  font-family: Nova Mono, sans-serif;
+}
+
+.CodeMirror .cm-header {
+	color: var(--red);
+}
+
+.CodeMirror .cm-yaml {
+	background-color: var(--green);
+}
+
+.CodeMirror .cm-link {
+	color: var(--red);
+}
+.CodeMirror .cm-string {
+	color: var(--yellow);
+}
+
+.CodeMirror .cm-atom {
+	background-color: var(--green);
+	color: var(--black);
+}
+
+.CodeMirror .cm-table-row > span {
+	background-color: var(--green);
+	color: var(--black);
+}
+
+.CodeMirror .cm-attribute,
+.CodeMirror .cm-tag {
+	color: var(--red);
+}
+
+.CodeMirror .cm-keyword,
+.CodeMirror .cm-builtin {
+	color: var(--red);
+	font-weight: bold;
+	font-style: italic;
+}
+
+.CodeMirror .cm-property, 
+.CodeMirror .cm-def {
+	color: var(--black);
+}
+
+.CodeMirror .cm-number {
+	color: var(--red);
+}
+
+.CodeMirror .cm-comment {
+	color: var(--grey);
+}
+#write {
+    position: relative;
+    box-sizing: border-box;
+
+    zoom: 110%;
+    background-image: url(https://theeyeopener.com/wp-content/uploads/2019/03/DD-parchment.jpg);
+    padding: 2cm;
+    padding-bottom: 4cm;
+}
+@media screen and (min-width: 25cm) {
+    #write {
+        /* Make it a page */
+        width: 21cm;
+        min-height: 29.7cm;
+        margin: 1cm auto;
+        box-shadow: 20px 20px 40px rgba(0, 0, 0, 0.5);
+        /* Add columns */
+        column-count: 2;
+        column-gap: 0.5cm;
+        column-width: 8cm;
+        /* Alignment */
+        text-align: left;
+    }
+}
+
+
+content {
+    overflow-y: scroll;
+    background-image: url(https://i.pinimg.com/originals/1e/f4/86/1ef486a24dd55567a11479379f02a2f3.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+#write * {
+    column-span: none;
+    break-inside: avoid-column;
+}
+#write p, #write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write div, #write pre {
+    width: 100%;
+}
+
+#write h1, #write hr {
+    column-span: all;
+}
+
+#write .CodeMirror {
+    break-before: avoid;
+}
+
+#write .md-meta-block {
+    font-family: Nova Mono, sans-serif;
+    background-color: var(--green);
+    border-left: 5px solid var(--red);
+    padding-left: 10px;
+}
+@media print {
+  @page {
+    size: A4;
+    size: portrait;
+    margin: 2cm;
+    background-image: url(https://theeyeopener.com/wp-content/uploads/2019/03/DD-parchment.jpg);
+  }
+  #write {
+    background-image: none !important;
+  }
+  body {
+    column-count: 2;
+    column-gap: 0.5cm;
+    column-width: 8cm;
+  }
+}
+html {
+  background-image: url(https://i.pinimg.com/originals/1e/f4/86/1ef486a24dd55567a11479379f02a2f3.jpg);
+}
+.on-focus-mode .md-end-block:not(.md-focus):not(.md-focus-container) * {
+	color: var(--grey);
+}
+/** Scrollbar **/
+::-webkit-scrollbar-thumb {
+  background: var(--red);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--yellow);
+}
+#md-notification {
+  background: var(--green);
+}
+.md-image>.md-meta {
+  color: var(--red);
+}
+
+
+/** Modal **/
+.popover {
+	background-color: var(--green);
+	color: var(--black);
+}
+.modal-content {
+	background-color: var(--offwhite);
+	padding: 1rem;
+	border: none;
+	border-left: 10px solid var(--red);
+}
+#md-searchpanel input, input {
+	background-color: var(--green);	
+	border: none;
+	padding: 5px 10px;
+}
+.dropdown-menu, .context-menu {
+	background-color: var(--green);
+	border-left: 10px solid var(--red);
+}
+.dropdown-menu .active, .context-menu .active {
+	background-color: var(--red);
+	color: var(--offwhite);
+}
+.menu-style-btn.active, .context-menu.dropdown-menu > .active > a {
+	background-color: rgba(0,0,0,0);
+}
+.context-menu.dropdown-menu > li > a:hover {
+	background-color: rgba(0,0,0,0);
+	color: var(--red);
+}
+.btn, .btn-danger, .searchpanel-search-option-btn {
+	background-color: var(--green);
+	border: none;
+	margin: 0.5rem;
+}
+.input-group-addon {
+	background-color: var(--offwhite);
+}
+#md-resize-grid {
+	color: var(--offwhite);
+	background-color: var(--red);
+	border: none;
+}
+
+
+/** Other **/
+#md-notification {
+	background-color: var(--offwhite);
+	border: none;
+}/** Crimson Text **/
+@import url("https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap");
+/** Alegreya **/
+@import url("https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400;0,500;0,700;0,800;0,900;1,400;1,500;1,700;1,800;1,900&display=swap");
+/** Nova Mono **/
+@import url('file:///C://Users//sammy//AppData//Roaming//Typora/themes/https://fonts.googleapis.com/css2?family=Nova+Mono&display=swap');
+
+/* Try to import from GitHub */
+@import "";
+@import "";
+@import "";
+@import "";
+@import "";
+@import "";
+@import "";
+
+/* Try locally, in case of connection fail */
+@import "";
+@import "";
+@import "";
+@import "";
+@import "";
+@import "";
+@import "";
+
+:root {
+  --offwhite: #fff9e6;
+  --red: #58180d;
+  --green: #e0e5c1;
+  --yellow: #c9ad6a;
+  --grey: #6D6A75;
+  --black: #403333;
+
+  font-size: 3.35mm;
+  font-family: "Alegreya", sans-serif;
+  color: var(--black);
+}
+
+
+</style>
+</head>
+<body class='typora-export os-windows'>
+<div id='write'  class=''><h3><a name="preliminary-map" class="md-header-anchor"></a><span>Preliminary Map:</span></h3><p><img src="https://lh6.googleusercontent.com/oIW9NqC7drTaE7cv_VCg2UyOGdV_XCXrjLVBxO5hM12x1MhI1yr6Fi8_6gyqEGOuhmYTYSrQ4UIBAmhQa5SQty2I_sL35sb0PQvVUEHPMrBbtcgLziq6lZhrpH-T4siNXUIBC09o" referrerpolicy="no-referrer" alt="img"><img src="https://lh3.googleusercontent.com/C1ZfU5J6dSMclNz-JB0jpfwns84jvY8ZXpP7pVxAq5BNHYe1Kz8d7XSj7UyvPOoY7-BtvMKokAsw-i7dcwD9MPED0ZJGiFesE1F3Ins8kVoqCgpQM_Jvet6BwqylUEwfPn2bgQsK" referrerpolicy="no-referrer" alt="img"><img src="https://lh5.googleusercontent.com/p_iWvU7lffAFIzqmYETldoui5CuN_7F4gThvTC-YNvxWo13KRVBqi2v-F_0hpR6Nz5KHu4UdiIHn6-E8uYrHK8PJnOPycYDau9UT_xTpjQXRFmqP2yD0zOWQ46pgGeJzVollj83e" referrerpolicy="no-referrer" alt="img"></p><h3><a name="basic-history" class="md-header-anchor"></a><span>BASIC HISTORY:</span></h3><p><span>a long time ago in a galaxy far away, there lived jessamine and her young sister, b. jessamine was first in line for the throne and had an awesome husband and a son. her sister b got mad jealous of jessamine’s power and magically banished her husband to a far away land + stuck him in a time something, and then b manipulated the queen’s son to believe she was evil and took him away. before jessamine knew of the betrayal, sister b knocked her out the mf park as well, but was half-unsuccessful as jessamine wrecked havoc on her old kingdom. she was finally banished to some other part of the world, and sister b fucked with history to make jessamine the bad guy . yea :) </span><del><span>sister b makes sure that each province has a different historical curriculum too so nobody actually knows de truth lmao!</span></del><span> Nobody knows what really happened but interpretations range from sister b usurping the throne to gently taking jessamine away from intense work so she wouldn’t breakdown to full family drama and the repercussions have been seen from rapid improvement under sister b’s less dreadful rule to a change in national policy towards imperialist expansionism.</span></p><h3><a name="details-in-story" class="md-header-anchor"></a><span>DETAILS IN STORY:</span></h3><ul><li><span>meeting the husband comes halfway thru campaign or sumn, hes stuck in a tree and cries out his wife’s true name, never brings it up again . accompanies party a bit to try n get back 2 de wife</span></li><li><span>it happened so long ago that both witches look old as fuck now, but in any historical paintings they look youthful- the son looks like them</span></li><li><span>The son was fed propaganda by sister b and absolutely despises his mother</span></li><li><span>Sister b made up a prophecy to incite the PCs and the son to go kill the witch</span></li></ul><h3><a name="world-details" class="md-header-anchor"></a><span>WORLD DETAILS:</span></h3><p><span>i like the idea of traveling the world and discovering different cultures, but you know</span></p><p><span>like a theocratic country headed by a prophet or god/goddess, an industrial country far ahead of its era, a harsh magical country, a militaristic feuding region, etc.</span></p><hr /><h2><a name="rive" class="md-header-anchor"></a><span>Rive</span></h2><blockquote><p><span>A mercantile country with a nominal diarchy, Rive was once as mighty as any other and is as beautiful as a polished jewel. Its wealth is vast, and there is an enormous societal gap between the rich and poor. Slavery is common here, uprisings ruthlessly suppressed, and loyalty bought.</span></p></blockquote><p><span>The current King of External Affairs and Queen of Internal Affairs are married and hold as little real political power as their many predecessors have for as long as most can remember. They want to restore the crown&#39;s weight and the glory of their country in foreign countries&#39; eyes.</span></p><h3><a name="geography" class="md-header-anchor"></a><span>Geography</span></h3><h5><a name="size" class="md-header-anchor"></a><span>Size</span></h5><ul><li><span>Approximately the size of Nigeria at ~932,000 km² or ~360,000 mi².</span></li></ul><h5><a name="borders" class="md-header-anchor"></a><span>Borders</span></h5><ul><li><span>Bordered by oceans to the north, east, and south, the Empire to the west and the Croft Republic to the northwest.</span></li></ul><h5><a name="biomes" class="md-header-anchor"></a><span>Biomes</span></h5><ul><li><span>Largely temperate rainforests, with some wetlands near the coasts to the east and tropical rainforest to the south.</span></li></ul><h5><a name="weather-patterns" class="md-header-anchor"></a><span>Weather patterns</span></h5><ul><li><span>Usually warm and sunny with regular rainfall. Temperatures average between 54℉ and 64℉ across most of the country except for in the tropical rainforest, where it averages 72℉.</span></li></ul><h3><a name="population" class="md-header-anchor"></a><span>Population</span></h3><h5><a name="total-population" class="md-header-anchor"></a><span>Total Population</span></h5><ul><li><span>7 Million? That’s the approx. population of Egypt in 1 C.E.</span></li></ul><h5><a name="life-expectancy" class="md-header-anchor"></a><span>Life Expectancy</span></h5><ul><li><span>25 Male, 32 Female.</span></li><li><span>This is accounting for infant mortalities, so numbers roughly double without those, but people are generally considered “old” in their mid-30s.</span></li></ul><h5><a name="average-children-per-family" class="md-header-anchor"></a><span>Average Children per Family</span></h5><ul><li><span>3.</span></li><li><span>Many more are born, perhaps 8 per woman on average, but maybe 3 survive to adulthood.</span></li></ul><h5><a name="population-density" class="md-header-anchor"></a><span>Population Density</span></h5><ul><li><span>14% urban, 50% suburban, 36% rural.</span></li></ul><h5><a name="religious-beliefs" class="md-header-anchor"></a><span>Religious Beliefs</span></h5><ul><li><span>58% belief in the official religion, 31% pagan, 10% agnostic, 1% atheist.</span></li><li><span>The official religion worships a vast pantheon with cults dedicated to major gods. Ziggurats, pyramids, and obelisks are erected in their honor.</span></li><li><span>The most prominent gods are those of the sun and moon, the two favoring the diarchy of external and internal affairs, respectively.</span></li><li><span>Other prominent gods include the god of wealth and the god of justice.</span></li></ul><h3><a name="military" class="md-header-anchor"></a><span>Military</span></h3><h5><a name="maximum-military-manpower" class="md-header-anchor"></a><span>Maximum Military Manpower</span></h5><ul><li><span>6% of the population.</span></li></ul><h5><a name="treaties-and-agreements" class="md-header-anchor"></a><span>Treaties and Agreements</span></h5><ul><li><span>They have a defensive pact with the Croft Republic.</span></li></ul><h5><a name="military-equipment" class="md-header-anchor"></a><span>Military Equipment</span></h5><ul><li><span>Military equipment is old and poorly maintained.</span></li></ul><h5><a name="military-service-requirements" class="md-header-anchor"></a><span>Military Service Requirements</span></h5><ul><li><span>Adults can volunteer for military service.</span></li></ul><h3><a name="economy" class="md-header-anchor"></a><span>Economy</span></h3><h5><a name="unemployment-rate" class="md-header-anchor"></a><span>Unemployment Rate</span></h5><ul><li><span>38%.</span></li><li><span>Children and elderly normally do not work.</span></li></ul><h5><a name="poverty-rate" class="md-header-anchor"></a><span>Poverty Rate</span></h5><ul><li><span>90% of the population lives in poverty.</span></li></ul><h5><a name="literacy-rate" class="md-header-anchor"></a><span>Literacy Rate</span></h5><ul><li><span>32%.</span></li><li><span>The wealthy and educated, such as Guild workers and scribes, often know how to read and write, but rural citizens and slaves do not.</span></li></ul><h5><a name="technological-capability" class="md-header-anchor"></a><span>Technological Capability</span></h5><ul><li><span>Technological capability is average, approx. equivalent to Earth technology in 500 BCE, or late iron age.</span></li></ul><h5><a name="natural-resources" class="md-header-anchor"></a><span>Natural Resources</span></h5><ul><li><span>Rich in natural resources: copper, tin, gold, diamonds, grain crops, timber, granite and limestone.</span></li></ul><h5><a name="currency" class="md-header-anchor"></a><span>Currency</span></h5><ul><li><p><span>The units of currency are called Royals (solid gold coins), Nobles (gold covered coins), and Strata (silver coins), and their values are determined by their weights for Nobles and Strata, and by royal decree for Royals. Different denominations are made with different ratios of lighter metals layered in gold, or simply lighter metals.</span></p><ul><li><span>1 Royal = 1,200 Nobles</span></li><li><span>1 Noble = 12 Strata</span></li><li><span>Denominations of 1, 2, and 6 for all. A loaf of bread is ~2 Stratum, a lamb is ~8 Nobles, shoes about the same, slaves ~200-300 Nobles, houses 400-1,000 Nobles.</span></li></ul></li></ul><h3><a name="culture" class="md-header-anchor"></a><span>Culture</span></h3><blockquote><p><span>In Rive, money can buy everything but happiness, and gold and gems flow like water.</span></p></blockquote><h5><a name="child-rearing" class="md-header-anchor"></a><span>Child Rearing</span></h5><ul><li><span>Children are raised to respect their parents absolutely, never speaking back to them, and taking care of them when necessary. Until they reach the age of 16, they are under their parents’ authority, and can be sent to work for their parents to collect the wages in exchange for being kept. Despite this, children are rarely abused, and there are strict laws punishing domestic violence. As well, adopted children are legally the same as blood children, and boys and girls inherit the same. Children are rarely sold into slavery, only in dire circumstances.</span></li></ul><h5><a name="names" class="md-header-anchor"></a><span>Names</span></h5><ul><li><p><span>Riven have only one name, with attached lineage or titles tacked on the end.</span></p><ul><li><span>For example, the King Lugalbanda might be introduced as &quot;Lugalbanda, Utu&#39;s Son, Ninsun&#39;s Husband, King of External Affairs.&quot;</span></li></ul></li></ul><h5><a name="earning" class="md-header-anchor"></a><span>Earning</span></h5><ul><li><span>Riven citizens usually work in the Guilds or as soldiers.</span></li><li><span>Pay varies greatly, but 6 Stratum a day is the minimum for a viable living. Skilled workers could make 1 Noble a day or more.</span></li></ul><h5><a name="learning" class="md-header-anchor"></a><span>Learning</span></h5><ul><li><span>Schools are only attended by the wealthy and are taught by scribes. Students learn about geography, mathematics, language, history, and economics. Private tutors also exist and are highly respected individuals.</span></li></ul><h5><a name="style" class="md-header-anchor"></a><span>Style</span></h5><p><span>Rive is well known for its megalithic structures, artistic writing, vibrant textiles, and heavy jewelry.</span></p><h5><a name="language" class="md-header-anchor"></a><span>Language</span></h5><ul><li><p><span>Riven largely speak Riven, though traveling merchants and wealthy and educated people tend to be at least literate in one or more other languages. The language, like the nation, is focused on wealth, so the worth of a noun, monetary or otherwise, is built into the way they are said, just like verb tenses are in English.</span></p><ul><li><span>Riven is an agglutinative subject-object-verb language, and its words tend to be one to three syllables.</span></li><li><span>It’s written either of two ways, logographic or phonetic scripts. The logograms depict a wide variety of images, similar to hieroglyphs. The phonetic script looks like a long and decorated line of ink, such as tibetan or arabic scripts. Both are written with quill, or carved into clay or stone.</span></li></ul></li></ul><h5><a name="stereotypes" class="md-header-anchor"></a><span>Stereotypes</span></h5><ul><li><span>Riven are stereotyped as being greedy and holding grudges.</span></li></ul><h3><a name="potential-conflict" class="md-header-anchor"></a><span>Potential Conflict</span></h3><h5><a name="major-characters" class="md-header-anchor"></a><span>Major Characters</span></h5><ul><li><p><span>The King, Lugalbanda, is from the family controlling most of Rive’s gold production and in charge of minting the currency. His father died just before he came of age, so he was immediately crowned.</span></p><ul><li><span>Despite his family’s wealth and power, his political power is little compared to the merchant guilds, which act more like an aristocracy superseding the crown.</span></li><li><span>As King of External Affairs, he should control all matters involving outside dealings such as the military, imports, and exports, declaring war, embargo, and so on. However, the guilds generally follow their laws and treat the words of the King more like guidelines.</span></li></ul></li><li><p><span>The Queen, Ninsun, is from the family controlling Rive’s diamond mines and was also crowned when she came of age.</span></p><ul><li><span>Basically the King but when it comes to internal matters such as wealth redistribution, internal investigations, policing, domestic courts, etc.</span></li></ul></li></ul><h5><a name="the-guilds-in-order-of-prominence" class="md-header-anchor"></a><span>The Guilds (in order of prominence)</span></h5><ol start='' ><li><span>Slaver’s Guild</span></li><li><span>Magician’s Guild</span></li><li><span>Smith’s Guild</span></li><li><span>Jeweler’s Guild</span></li><li><span>Alchemist&#39;s and Apothecary’s Guild</span></li><li><span>Weaver’s Guild</span></li><li><span>Culinary Guild</span></li><li><span>Brewer’s Guild</span></li><li><span>Scribe’s Guild</span></li><li><span>Shipbuilder’s Guild</span></li><li><span>Painter’s Guild</span></li><li><span>Mason’s Guild</span></li><li><span>Carpenter’s Guild</span></li><li><span>Potter’s Guild</span></li><li><span>Wagon-maker’s Guild</span></li><li><span>Woodworker’s Guild</span></li><li><span>Glassblower’s Guild</span></li><li><span>Cobbler’s Guild</span></li><li><span>Leatherworker’s Guild</span></li><li><span>Cartographer’s Guild</span></li><li><span>Tinker’s Guild</span></li></ol><ul><li><p><span>The party can appear, some of them be captured and almost made into slaves, rescued, arrested, and then meet the diarchy or one of the two.</span></p><ul><li><span>The diarchy can see a useful group of insurrectionists that can be used to gain political power while maintaining deniability. Assassination, sabotage, inciting riots, etc, whatever can disrupt the current regime. They’re on the verge of making their big grab for power but they need one last push against their key detractor--the Slaver’s Guild.</span></li><li><span>If the party can sabotage the guilds and set them up into an internal conflict, the diarchy can gain control through the appearance of unity.</span></li><li><span>Alternatively, the party can set up the diarchy with the guilds and the rulership will have a quick turnover, but who can tell how well the new rulers will treat the party?</span></li></ul></li></ul><hr /><h2><a name="austere-empire" class="md-header-anchor"></a><span>Austere Empire</span></h2><blockquote><p><span>An Asian themed country with complicated and esoteric etiquette, customs, traditions, religion, and more. It’s also slightly xenophobic and isolationist.</span></p></blockquote><p><span>The Empire has only in the last 30 years come out of a rather strict isolationist policy maintained over the previous 3 emperors, or 140 years. Hence, it’s borders will be open to travelers for business and pleasure. However, this has not completely changed peoples’ opinions of foreigners, so some people may reject them, especially in and around the capital city.</span></p><p><em><span>It would be very convenient for a party member and their family to come from this country, especially if they’re a noble family. Perhaps an heir? That way they have nominal political power and can more easily gain audience with and sway important people.</span></em></p><p><em><span>I could have the party member receive a note about a severe rice shortage and a need to somehow get an audience with the emperor to desperately and humbly request a season of extra rice, or get that rice some other way, or fail and starve the family.</span></em></p><p><span>History checks can be emphasized in this country to follow the customs and traditions appropriately.</span></p><h3><a name="geography-n238" class="md-header-anchor"></a><span>Geography</span></h3><h5><a name="size-n239" class="md-header-anchor"></a><span>Size</span></h5><ul><li><span>Approximately the size of Mongolia at ~1,568,000 km² or ~605,000 mi².</span></li></ul><h5><a name="borders-n243" class="md-header-anchor"></a><span>Borders</span></h5><ul><li><span>Oceans to the south and west, Rive to the east and the Croft Republic to the north.</span></li></ul><h5><a name="biomes-n247" class="md-header-anchor"></a><span>Biomes</span></h5><ul><li><span>Temperate deciduous forests, grasslands, temperate rainforests.</span></li></ul><h5><a name="weather-patterns-n251" class="md-header-anchor"></a><span>Weather patterns</span></h5><ul><li><span>Cool and sunny most days with regular light rain across most of the country, although temperatures average 80℉ nearer the equator.</span></li></ul><h3><a name="population-n255" class="md-header-anchor"></a><span>Population</span></h3><h5><a name="total-population-n256" class="md-header-anchor"></a><span>Total Population</span></h5><ul><li><span>8.2 Million? That’s roughly 1/7th of the population of the Han Dynasty c. 1 C.E.</span></li></ul><h5><a name="life-expectancy-n260" class="md-header-anchor"></a><span>Life Expectancy</span></h5><ul><li><span>38 Male, 40 Female.</span></li><li></li></ul><h5><a name="average-children-per-family-n266" class="md-header-anchor"></a><span>Average Children per Family</span></h5><ul><li><span>3.</span></li><li><span>Maybe 5 or 6 are born, but 3 may live to adulthood.</span></li></ul><h5><a name="population-density-n272" class="md-header-anchor"></a><span>Population Density</span></h5><ul><li><span>40% urban, 16% suburban, 44% rural.</span></li></ul><h5><a name="religious-beliefs-n276" class="md-header-anchor"></a><span>Religious Beliefs</span></h5><ul><li><span>86% belief in the official religion, 12% minor, 1% agnostic,1% atheist.</span></li><li><span>The official religion considers the Emperor as divinely appointed and duty-bound, so his words are equal to the gods’.</span></li></ul><h3><a name="military-n282" class="md-header-anchor"></a><span>Military</span></h3><h5><a name="maximum-military-manpower-n283" class="md-header-anchor"></a><span>Maximum Military Manpower</span></h5><ul><li><span>23% of the population.</span></li></ul><h5><a name="treaties-and-agreements-n287" class="md-header-anchor"></a><span>Treaties and Agreements</span></h5><ul><li><span>None</span></li></ul><h5><a name="military-equipment-n291" class="md-header-anchor"></a><span>Military Equipment</span></h5><ul><li><span>Military equipment is outdated but well maintained.</span></li></ul><h5><a name="military-service-requirements-n295" class="md-header-anchor"></a><span>Military Service Requirements</span></h5><ul><li><span>There is mandatory military service for all adult males.</span></li></ul><h3><a name="economy-n299" class="md-header-anchor"></a><span>Economy</span></h3><h5><a name="unemployment-rate-n300" class="md-header-anchor"></a><span>Unemployment Rate</span></h5><ul><li><span>43%.</span></li><li></li></ul><h5><a name="poverty-rate-n306" class="md-header-anchor"></a><span>Poverty Rate</span></h5><ul><li><span>83% of the population lives in poverty.</span></li></ul><h5><a name="literacy-rate-n310" class="md-header-anchor"></a><span>Literacy Rate</span></h5><ul><li><span>13%.</span></li><li><span>The wealthy and educated, such as Guild workers and scribes, often know how to read and write, but rural citizens and slaves do not.</span></li></ul><h5><a name="technological-capability-n316" class="md-header-anchor"></a><span>Technological Capability</span></h5><ul><li><span>Technological capability is average, approx. equivalent to Earth technology in 500 BCE, or late iron age.</span></li></ul><h5><a name="natural-resources-n320" class="md-header-anchor"></a><span>Natural Resources</span></h5><ul><li><span>Coal, copper, iron, silver, platinum, fertile farmland, grain crops, timber</span></li></ul><h5><a name="currency-n324" class="md-header-anchor"></a><span>Currency</span></h5><ul><li><span>Round copper coins with square holes, values declared by the Emperor.</span></li><li><span>1 ryo = 4 bu = 92 Strata</span></li><li><span>1 bu = 4 shu = 23 Strata</span></li><li><span>1 shu = 16 mon = 5.75 Strata</span></li></ul><h3><a name="culture-n334" class="md-header-anchor"></a><span>Culture</span></h3><blockquote><p><span>In Rive, money can buy everything but happiness, and gold and gems flow like water.</span></p></blockquote><h5><a name="child-rearing-n337" class="md-header-anchor"></a><span>Child Rearing</span></h5><ul><li><span>For serfs, suburban citizens, and other non-nobility, families tend to be tight-knit, and children are raised mainly by their parents with some close relatives helping now and then.</span></li><li><span>For the nobility, families are often small and tense since they have to worry about succession, inheritance, securing ties, etc., and parents usually don’t have much time to spend with their children.</span></li><li><span>For the imperial family, there are often more children than fingers on both hands, and maybe a third as many women in the harem, all vying for power, prestige, the Emperor’s approval, and right to succession.</span></li></ul><h5><a name="names-n345" class="md-header-anchor"></a><span>Names</span></h5><ul><li><span>Austere serfs have one name, a personal name their parents give them two weeks after birth.</span></li><li><span>Citizens usually have two names, one family and one personal. For example, one could be named “Onyáma Naka,” with “Naka” as a personal name and “Onyáma” as a family name.</span></li><li><span>Nobles may have a third name to keep track of lineage in a large family.</span></li><li><span>Imperial family members have three names: the imperial family name, their other parent’s personal name, and their own personal name.</span></li><li><span>Except for serfs, the personal name is the most private, and only those most dear address one by it.</span></li></ul><h5><a name="earning-n357" class="md-header-anchor"></a><span>Earning</span></h5><ul><li><span>The rural population is largely serfs, so their pay is food and protection. Suburban and urban Austere citizens earn money through a variety of crafts and trades, from silk-spinning to masonry to mercenary work. Nobility gain income from taxes, trade deals, and investments. The imperial family gains money through taxes.</span></li></ul><h5><a name="learning-n361" class="md-header-anchor"></a><span>Learning</span></h5><ul><li><span>Schools are only attended by the sons of noble families. Noble daughters are privately tutored. Imperial sons and daughters are also privately tutored, but they are often tested with real practice.</span></li></ul><h5><a name="style-n365" class="md-header-anchor"></a><span>Style</span></h5><ul><li><span>The Empire is well known for its distinctive language and script, its ornate textiles and clothing styles, and its impressively complicated rituals and traditions.</span></li></ul><h5><a name="language-n369" class="md-header-anchor"></a><span>Language</span></h5><ul><li><p><span>Austere people speak Austere, though a few state employees and traveling salesmen speak other languages. This is a language that emphasizes nuance and respect, with a word for every family member, and a number of formal and informal honorifics.</span></p><ul><li><span>It’s an analytic language with a subject-verb-object basic word order. It’s also tonal, so pitch is important for distinguishing syllables.</span></li><li><span>It’s written with a mix of phonetic and logographic scripts with a brush and ink.</span></li></ul></li></ul><h5><a name="stereotypes-n378" class="md-header-anchor"></a><span>Stereotypes</span></h5><ul><li><span>The Austere are often stereotyped as snooty, uptight, and athletically inferior.</span></li></ul><h3><a name="potential-conflict-n382" class="md-header-anchor"></a><span>Potential Conflict</span></h3><h5><a name="major-characters-n383" class="md-header-anchor"></a><span>Major Characters</span></h5><p><span>It’s an empire, after all, so an emperor rules it. He has 2 wives, 4 concubines, 11 sons and 7 daughters, each with their own elaborate stories and standings with the emperor, his harem, the court ministers, and the people. </span></p><p><img src="https://lh5.googleusercontent.com/DMKRxyjMPbqbOJ9XBNKYsN2RjnLnSPNsrWTw5T4n6nV9uQCkRc13WO0xU-lypVBV0BuNlb2elVhPEC3lhroCrjoGEE4ANmYACaX_gSsUhvkKxci0mk65ttbv9AGYJ1YodbVUgZYp" referrerpolicy="no-referrer" alt="img"></p><p><span>The Emperor, Hoàngtai Liuzen Ryota - At the impressive age of 64 years, the Emperor is an inscrutable man who inherited the throne on the event of his father’s death, 42 years ago. He brought the Empire out of isolation, boosting the economy and improving international relationships, and passed myriad legal reforms involving war, trade, medicine, and manufacturing. Also under his rule, prostitution, slavery, and extortion have been on the rise, while street fighting and banditry have gone down. Of his harem, he currently favors his second consort, who whispers in his ear at court meetings.</span></p><p><span>1st Consort, Hoàngtai Tong Hi - At 50 years, the Empress Consort. She birthed the 1st son, 1st daughter, and 4th son.</span></p><ul><li><span>Her marriage was arranged before she was born, but she and the Emperor fortunately enjoy each other’s company.</span></li><li><span>She and the 2nd Consort are rivals, and she pays little attention to the 4 concubines. Her word is almost as good as the Emperor’s and the ministers respect her.</span></li></ul><p><span>2nd Consort, Hoàngtai Samaò Shima - At 47 years, the second wife of the current emperor. She birthed the 2nd son, 2nd and 4th daughters, and the 3rd son.</span></p><ul><li><span>Her marriage was also arranged, but only after the current Emperor ascended to the throne. Since then, she’s jealously guarded her position at his side garnered his favor.</span></li><li><span>She and the Empress Consort are rivals, and she does her best to secure her spot at the top. Her word is worth less than that of the Empress Consort, but she is always whispering in the Emperor’s ear so the ministers fear her.</span></li></ul><p><span>1st Concubine, Yao Sunlin - At 42 years, she’s birthed the 3rd and 5th daughters, and the 5th son. Since the Emperor can have only 2 wives, she’s his first concubine.</span></p><p><span>2nd Concubine, Lin Nagi - At 36 years, she’s birthed the 6th, 8th, and 10th sons.</span></p><p><span>3rd Concubine, Shiki Jito - At 32 years, she’s birthed the 7th and 9th sons.</span></p><p><span>4th Concubine, Qinwa Tsumìng - At 28 years, she’s birthed the 6th and, 7th daughter, and the 11th son.</span></p><p><span>The 1st Son, 1st Consort, 34 years - 1st in line for the throne, a frustration to the Emperor.</span></p><ul><li><span>A competent tactician, painter, classically trained with 3 musical instruments, educated in warfare, politics, horticulture, agriculture, and natural philosophy, he is extensively qualified to rule.</span></li><li><span>However, he is also slightly sickly, and sometimes he is confined to his home because he is too ill to work. For this reason, the Emperor would pass him over for the throne.</span></li><li><span>He deeply loves his mother and full-blood siblings, and though he wishes he could care as much for his other siblings, he knows they are in a harsh competition for their father’s favor and inheritance. The ministers are divided on him because some of them hold loyalty to his mother, but others would mock him for his illness.</span></li></ul><p><span>The 2nd Son, 2nd Consort, 31 years - 2nd in line for the throne, the Emperor’s favored son.</span></p><ul><li><span>A competent tactician, painter, hawker, educated in architecture, agriculture, warfare, politics, and archery, and the eldest son of the Emperor’s favored wife, he is more than eligible to inherit.</span></li><li><span>In the event of the Emperor’s death, although they are second in line, by the will of the Emperor, this one will take the throne.</span></li></ul><p><span>The 1st Daughter, 1st Consort, 30 years - 12th in line for the throne, the Emperor’s favorite daughter.</span></p><p><span>The 2nd Daughter, 2nd Consort, 30 years - 13th in line for the throne, </span></p><p><span>The 3rd Daughter, 1st Concubine, 26 years - 15th in line for the throne, </span></p><p><span>The 4th Daughter, 2nd Consort, 26 years - 14th in line for the throne, </span></p><p><span>The 3rd Son, 2nd Consort, 24 years - 3rd in line for the throne, </span></p><p><span>The 4th Son, 1st Consort, 24 years - 4th in line for the throne, </span></p><p><span>The 5th Daughter, 1st Concubine, 24 years - 16th in line for the throne, </span></p><p><span>The 5th Son, 1st Concubine, 22 years - 5th in line for the throne, </span></p><p><span>The 6th Son, 2nd Concubine, 20 years - 6th in line for the throne, </span></p><p><span>The 7th Son, 3rd Concubine, 16 years - 7th in line for the throne, </span></p><p><span>The 8th Son, 2nd Concubine, 16 years - 8th in line for the throne, </span></p><p><span>The 6th Daughter, 4th Concubine, 12 years - 17th in line for the throne, </span></p><p><span>The 9th Son, 3rd Concubine, 12 years - 9th in line for the throne, </span></p><p><span>The 7th Daughter, 4th Concubine, 8 years - 18th in line for the throne, </span></p><p><span>The 10th Son, 2nd Concubine, 7 years - 10th in line for the throne, </span></p><p><span>The 11th Son, 4th Concubine, 4 years - 11th in line for the throne, </span></p><h5><a name="court-ministers" class="md-header-anchor"></a><span>Court Ministers</span></h5><ul><li><span>Of the Left (Minister of State)</span></li><li><span>Right (also minister of state)</span></li><li><span>Inner (Counselor)</span></li><li><span>War</span></li><li><span>Justice</span></li><li><span>Treasury</span></li><li><span>Civil Affairs</span></li><li><span>Rice</span></li><li><span>Ceramics</span></li><li><span>Iron</span></li><li><span>etc.</span></li></ul><hr /><h2><a name="croft-republic" class="md-header-anchor"></a><span>Croft Republic</span></h2><p><span>A young democratic republic, only a hundred years old, with the highest position of “President.”</span></p><ul><li><span>Each town is part of a “region,” which is part of a “territory,” which is part of the Croft Republic. Regional and territorial administrative officials are elected by locals or appointed by the president, and regional and territorial leaders elect the president.</span></li><li><span>The President is practically a King for their years in office, except when their decisions are overruled by more than half of the territorial leaders in peacetime. In wartime, they have supreme power.</span></li></ul><p><span>120 years ago, this land was a mess of squabbling minor countries not unlike the feuding clan territory to the north, but eventually it was united through conquest.</span></p><ul><li><span>An ambitious young lady led her army from the east to the west and either killed or convinced each ruler she crossed to capitulate and join her growing republic.</span></li><li><span>She did not treat her fallen enemies cruely, outlawed slavery altogether, and encouraged mixing cultures and people to unify the people.</span></li><li><span>When she had conquered enough, she wrote that she should be succeeded through election, and died 6 years thereafter. Every president since has had a single 6 year term, elected as currently through convention.</span></li></ul><h3><a name="geography-n472" class="md-header-anchor"></a><span>Geography</span></h3><h5><a name="size-n473" class="md-header-anchor"></a><span>Size</span></h5><ul><li><span>Approximately the size of Sudan at ~1,866,000 km² or ~720,000 mi².</span></li></ul><h5><a name="borders-n477" class="md-header-anchor"></a><span>Borders</span></h5><ul><li><span>Bordered by Rive, the Empire, Reverie, and Mondra to the south from east to west with some ocean access between the Empire and Reverie, oceans to the east and west, and the Warring Clans Territory to the north.</span></li></ul><h5><a name="biomes-n481" class="md-header-anchor"></a><span>Biomes</span></h5><ul><li><span>Temperate rainforests at lower elevations, temperate deciduous forests at higher elevations.</span></li></ul><h5><a name="weather-patterns-n485" class="md-header-anchor"></a><span>Weather patterns</span></h5><ul><li><span>Cool all year, average 48℉ with equal sunny and rainy days.</span></li></ul><h3><a name="population-n489" class="md-header-anchor"></a><span>Population</span></h3><h5><a name="total-population-n490" class="md-header-anchor"></a><span>Total Population</span></h5><ul><li><span>10.5 Million? That’s approx. the population of Japan in 1450 C.E.</span></li></ul><h5><a name="life-expectancy-n494" class="md-header-anchor"></a><span>Life Expectancy</span></h5><ul><li><span>25 Male, 28 Female.</span></li><li><span>In a Republic where people share hard labor and live close together in cities, the abuse builds up on the body.</span></li></ul><h5><a name="average-children-per-family-n500" class="md-header-anchor"></a><span>Average Children per Family</span></h5><ul><li><span>3.</span></li><li><span>People only have 4 or 5 kids max, but more of them live due to better medicine.</span></li></ul><h5><a name="population-density-n506" class="md-header-anchor"></a><span>Population Density</span></h5><ul><li><span>68% urban. 13% suburban, 19% rural.</span></li></ul><h5><a name="religious-beliefs-n510" class="md-header-anchor"></a><span>Religious Beliefs</span></h5><ul><li><span>24% belief in major religion, 56% pagan, 16% agnostic, 4% atheist.</span></li></ul><h3><a name="military-n514" class="md-header-anchor"></a><span>Military</span></h3><h5><a name="maximum-military-manpower-n515" class="md-header-anchor"></a><span>Maximum Military Manpower</span></h5><ul><li><span>42% of the population.</span></li></ul><h5><a name="treaties-and-agreements-n519" class="md-header-anchor"></a><span>Treaties and Agreements</span></h5><ul><li><span>They have a defensive pact with Rive.</span></li></ul><h5><a name="military-equipment-n523" class="md-header-anchor"></a><span>Military Equipment</span></h5><ul><li><span>Military equipment is average and regularly maintained.</span></li></ul><h5><a name="military-service-requirements-n527" class="md-header-anchor"></a><span>Military Service Requirements</span></h5><ul><li><span>Military service is voluntary for adults.</span></li></ul><h3><a name="economy-n531" class="md-header-anchor"></a><span>Economy</span></h3><h5><a name="unemployment-rate-n532" class="md-header-anchor"></a><span>Unemployment Rate</span></h5><ul><li><span>42%.</span></li></ul><h5><a name="poverty-rate-n536" class="md-header-anchor"></a><span>Poverty Rate</span></h5><ul><li><span>75% of the population lives in poverty.</span></li></ul><h5><a name="literacy-rate-n540" class="md-header-anchor"></a><span>Literacy Rate</span></h5><ul><li><span>89%.</span></li></ul><h5><a name="technological-capability-n544" class="md-header-anchor"></a><span>Technological Capability</span></h5><ul><li><span>Technological capability is slightly above average, allowing for inventions such as rough steel and water-wheels.</span></li></ul><h5><a name="natural-resources-n548" class="md-header-anchor"></a><span>Natural Resources</span></h5><ul><li><span>Fertile farmland, lumbar, medicinal herbs, iron, copper, coal, tin, and aluminum.</span></li></ul><h5><a name="currency-n552" class="md-header-anchor"></a><span>Currency</span></h5><ul><li><p><span>Variously sized coins of mixed iron, copper, and tin. </span></p><ul><li><span>1 Blic = 1.33 (4/3) Strata = 3.71 (256/69) mon</span></li></ul></li></ul><h3><a name="culture-n559" class="md-header-anchor"></a><span>Culture</span></h3><h5><a name="child-rearing-n560" class="md-header-anchor"></a><span>Child Rearing</span></h5><ul><li><span>Republic citizens are raised slightly differently depending on the culture they come from, but “normally” they are brought up in nuclear families, taught their parent’s crafts, attend school if they can afford it, and leave to start their own lives in their late teens or early 20s.</span></li></ul><h5><a name="names-n564" class="md-header-anchor"></a><span>Names</span></h5><ul><li></li></ul><h5><a name="earning-n568" class="md-header-anchor"></a><span>Earning</span></h5><ul><li></li></ul><h5><a name="learning-n572" class="md-header-anchor"></a><span>Learning</span></h5><ul><li></li></ul><h5><a name="style-n576" class="md-header-anchor"></a><span>Style</span></h5><ul><li></li></ul><h5><a name="language-n580" class="md-header-anchor"></a><span>Language</span></h5><ul><li><ul><li><span>Riven is an agglutinative subject-object-verb language, and its words tend to be one to three syllables.</span></li><li><span>It’s written either of two ways, logographic or phonetic scripts. The logograms depict a wide variety of images, similar to hieroglyphs. The phonetic script looks like a long and decorated line of ink, such as tibetan or arabic scripts. Both are written with quill, or carved into clay or stone.</span></li></ul></li></ul><h5><a name="stereotypes-n589" class="md-header-anchor"></a><span>Stereotypes</span></h5><ul><li></li></ul><h3><a name="potential-conflict-n593" class="md-header-anchor"></a><span>Potential Conflict</span></h3><p><span>Currently, they’re having an issue with refugees coming from the Feuding Clans Territory, namely that there’s too many and they have little food or shelter to spare.</span></p><p><span>Specifically there is one border town mayor for whom this will be a major problem as it approaches winter, and he will have to choose whether or not to accept, shelter, and feed the refugees at the risk of his own people dying, or if he should leave them to starve just outside of his walls.</span></p><p><span>The mayor has become a hard man through experience, and he sees that if he lets them in then there is great risk to his own people, and to make it worse, the leader of his region has ordered him to leave them. On the other hand, he was once a man of principle who dreamed of glory, and it would not take too much effort to remind him of this history and convince him to accept them all and do his best to care for everyone under his banner.</span></p><hr /><h2><a name="feuding-clans-territory" class="md-header-anchor"></a><span>Feuding Clans Territory</span></h2><blockquote><p><span>A divided land, fought about by powerful clans vying for power, prestige, money, survival, revenge, and more. It’s been like this for as long as most people can remember, though some ancients may tell a different story.</span></p></blockquote><p><span>Clans are tight-knit groups of people, families, who govern and defend themselves from other clans. Isolationism varies by clan, but so does a lot of culture. The only consistency is that all clans have powerful warriors to protect themselves. For the most part, they also agree on simple rules of warfare such as “don’t burn crop fields or kill civilians,” but accidents happen.</span></p><h3><a name="geography-n601" class="md-header-anchor"></a><span>Geography</span></h3><h5><a name="size-n602" class="md-header-anchor"></a><span>Size</span></h5><ul><li><span>Approximately the size of Mali at ~1,232,000 km² or ~180000 mi².</span></li></ul><h5><a name="borders-n606" class="md-header-anchor"></a><span>Borders</span></h5><ul><li><span>Bordered by oceans to the north and west, the Croft Republic to the south and east.</span></li></ul><h5><a name="biomes-n610" class="md-header-anchor"></a><span>Biomes</span></h5><ul><li><span>Temperate deciduous forests and grasslands, some wetlands at the coast.</span></li></ul><h5><a name="weather-patterns-n614" class="md-header-anchor"></a><span>Weather patterns</span></h5><ul><li><span>Cool to cold, average 41℉ annually, with light rain inland and heavy rain near the coast.</span></li></ul><h3><a name="population-n618" class="md-header-anchor"></a><span>Population</span></h3><h5><a name="total-population-n619" class="md-header-anchor"></a><span>Total Population</span></h5><ul><li></li></ul><h5><a name="life-expectancy-n623" class="md-header-anchor"></a><span>Life Expectancy</span></h5><ul><li></li></ul><h5><a name="average-children-per-family-n627" class="md-header-anchor"></a><span>Average Children per Family</span></h5><ul><li></li></ul><h5><a name="population-density-n631" class="md-header-anchor"></a><span>Population Density</span></h5><ul><li></li></ul><h5><a name="religious-beliefs-n635" class="md-header-anchor"></a><span>Religious Beliefs</span></h5><ul><li></li></ul><h3><a name="military-n639" class="md-header-anchor"></a><span>Military</span></h3><h5><a name="maximum-military-manpower-n640" class="md-header-anchor"></a><span>Maximum Military Manpower</span></h5><ul><li></li></ul><h5><a name="treaties-and-agreements-n644" class="md-header-anchor"></a><span>Treaties and Agreements</span></h5><ul><li></li></ul><h5><a name="military-equipment-n648" class="md-header-anchor"></a><span>Military Equipment</span></h5><ul><li></li></ul><h5><a name="military-service-requirements-n652" class="md-header-anchor"></a><span>Military Service Requirements</span></h5><ul><li></li></ul><h3><a name="economy-n656" class="md-header-anchor"></a><span>Economy</span></h3><h5><a name="unemployment-rate-n657" class="md-header-anchor"></a><span>Unemployment Rate</span></h5><ul><li></li></ul><h5><a name="poverty-rate-n661" class="md-header-anchor"></a><span>Poverty Rate</span></h5><ul><li></li></ul><h5><a name="literacy-rate-n665" class="md-header-anchor"></a><span>Literacy Rate</span></h5><ul><li></li></ul><h5><a name="technological-capability-n669" class="md-header-anchor"></a><span>Technological Capability</span></h5><ul><li></li></ul><h5><a name="natural-resources-n673" class="md-header-anchor"></a><span>Natural Resources</span></h5><ul><li></li></ul><h5><a name="currency-n677" class="md-header-anchor"></a><span>Currency</span></h5><ul><li></li></ul><h3><a name="culture-n681" class="md-header-anchor"></a><span>Culture</span></h3><h5><a name="child-rearing-n682" class="md-header-anchor"></a><span>Child Rearing</span></h5><ul><li></li></ul><h5><a name="names-n686" class="md-header-anchor"></a><span>Names</span></h5><ul><li></li></ul><h5><a name="earning-n690" class="md-header-anchor"></a><span>Earning</span></h5><ul><li></li></ul><h5><a name="learning-n694" class="md-header-anchor"></a><span>Learning</span></h5><ul><li></li></ul><h5><a name="style-n698" class="md-header-anchor"></a><span>Style</span></h5><ul><li></li></ul><h5><a name="language-n702" class="md-header-anchor"></a><span>Language</span></h5><ul><li><ul><li></li><li></li></ul></li></ul><h5><a name="stereotypes-n711" class="md-header-anchor"></a><span>Stereotypes</span></h5><ul><li></li></ul><h3><a name="potential-conflict-n715" class="md-header-anchor"></a><span>Potential Conflict</span></h3><p>&nbsp;</p><hr /><h2><a name="reverie" class="md-header-anchor"></a><span>Reverie</span></h2><blockquote><p><span>A typical western-style fantasy kingdom, Reverie is a prosperous kingdom with fertile lands and peaceful borders.</span></p></blockquote><p><span>The people love the current King, ——, whose progressive policies and honorable conduct have endeared him to the masses and made him enemies among the nobility and guilds. However, his success in expanding the treasury and not inconsiderable charisma have earned him his subjects’ loyalty.</span></p><p><span>The current princess, —–, is young and full of energy, and her father fully intends for her to rule instead of letting her future husband take control. Reactions to this decision range from unsettled to enraged, more negatively from guilds and nobles. It may incense a coup or cause significant civil unrest as political dissidents seek to undermine or remove the princess.</span></p><h3><a name="geography-n722" class="md-header-anchor"></a><span>Geography</span></h3><h5><a name="size-n723" class="md-header-anchor"></a><span>Size</span></h5><ul><li><span>Approximately the size of Bolivia at ~1,082,000 km² or ~418,000 mi².</span></li></ul><h5><a name="borders-n727" class="md-header-anchor"></a><span>Borders</span></h5><ul><li></li></ul><h5><a name="biomes-n731" class="md-header-anchor"></a><span>Biomes</span></h5><ul><li></li></ul><h5><a name="weather-patterns-n735" class="md-header-anchor"></a><span>Weather patterns</span></h5><ul><li></li></ul><h3><a name="population-n739" class="md-header-anchor"></a><span>Population</span></h3><h5><a name="total-population-n740" class="md-header-anchor"></a><span>Total Population</span></h5><ul><li></li></ul><h5><a name="life-expectancy-n744" class="md-header-anchor"></a><span>Life Expectancy</span></h5><ul><li></li></ul><h5><a name="average-children-per-family-n748" class="md-header-anchor"></a><span>Average Children per Family</span></h5><ul><li></li></ul><h5><a name="population-density-n752" class="md-header-anchor"></a><span>Population Density</span></h5><ul><li></li></ul><h5><a name="religious-beliefs-n756" class="md-header-anchor"></a><span>Religious Beliefs</span></h5><ul><li></li></ul><h3><a name="military-n760" class="md-header-anchor"></a><span>Military</span></h3><h5><a name="maximum-military-manpower-n761" class="md-header-anchor"></a><span>Maximum Military Manpower</span></h5><ul><li></li></ul><h5><a name="treaties-and-agreements-n765" class="md-header-anchor"></a><span>Treaties and Agreements</span></h5><ul><li></li></ul><h5><a name="military-equipment-n769" class="md-header-anchor"></a><span>Military Equipment</span></h5><ul><li></li></ul><h5><a name="military-service-requirements-n773" class="md-header-anchor"></a><span>Military Service Requirements</span></h5><ul><li></li></ul><h3><a name="economy-n777" class="md-header-anchor"></a><span>Economy</span></h3><h5><a name="unemployment-rate-n778" class="md-header-anchor"></a><span>Unemployment Rate</span></h5><ul><li></li></ul><h5><a name="poverty-rate-n782" class="md-header-anchor"></a><span>Poverty Rate</span></h5><ul><li></li></ul><h5><a name="literacy-rate-n786" class="md-header-anchor"></a><span>Literacy Rate</span></h5><ul><li></li></ul><h5><a name="technological-capability-n790" class="md-header-anchor"></a><span>Technological Capability</span></h5><ul><li></li></ul><h5><a name="natural-resources-n794" class="md-header-anchor"></a><span>Natural Resources</span></h5><ul><li></li></ul><h5><a name="currency-n798" class="md-header-anchor"></a><span>Currency</span></h5><ul><li></li></ul><h3><a name="culture-n802" class="md-header-anchor"></a><span>Culture</span></h3><h5><a name="child-rearing-n803" class="md-header-anchor"></a><span>Child Rearing</span></h5><ul><li></li></ul><h5><a name="names-n807" class="md-header-anchor"></a><span>Names</span></h5><ul><li></li></ul><h5><a name="earning-n811" class="md-header-anchor"></a><span>Earning</span></h5><ul><li></li></ul><h5><a name="learning-n815" class="md-header-anchor"></a><span>Learning</span></h5><ul><li></li></ul><h5><a name="style-n819" class="md-header-anchor"></a><span>Style</span></h5><ul><li></li></ul><h5><a name="language-n823" class="md-header-anchor"></a><span>Language</span></h5><ul><li><ul><li></li><li></li></ul></li></ul><h5><a name="stereotypes-n832" class="md-header-anchor"></a><span>Stereotypes</span></h5><ul><li></li></ul><h3><a name="potential-conflict-n836" class="md-header-anchor"></a><span>Potential Conflict</span></h3><hr /><h2><a name="mondra" class="md-header-anchor"></a><span>Mondra</span></h2><blockquote><p><span>Mondra is the most industrialized country in the world. It&#39;s strangely anachronistic here, with paved roads, busses and trains, even electric lighting! But what&#39;s powering it all?</span></p></blockquote><p><span>90% of the people living in Mondra lead easy lives, work mundane jobs, and overall have a higher standard of living than most of the rest of the world.</span></p><p><span>This is, of course, if you ignore the slaves under the floor of the bus casting magic to keep it going, or the human batteries of the floating island.</span></p><h3><a name="geography-n842" class="md-header-anchor"></a><span>Geography</span></h3><h5><a name="size-n843" class="md-header-anchor"></a><span>Size</span></h5><ul><li><span>Approximately the size of France at ~635,000 km² or ~245,000 mi².</span></li></ul><h5><a name="borders-n847" class="md-header-anchor"></a><span>Borders</span></h5><ul><li><span>Bordered by oceans to the north and south, Reverie to the southeast, the Croft Republic to the northeast and Eruditia to the west.</span></li></ul><h5><a name="biomes-n851" class="md-header-anchor"></a><span>Biomes</span></h5><ul><li></li></ul><h5><a name="weather-patterns-n855" class="md-header-anchor"></a><span>Weather patterns</span></h5><ul><li></li></ul><h3><a name="population-n859" class="md-header-anchor"></a><span>Population</span></h3><h5><a name="total-population-n860" class="md-header-anchor"></a><span>Total Population</span></h5><ul><li></li></ul><h5><a name="life-expectancy-n864" class="md-header-anchor"></a><span>Life Expectancy</span></h5><ul><li></li></ul><h5><a name="average-children-per-family-n868" class="md-header-anchor"></a><span>Average Children per Family</span></h5><ul><li></li></ul><h5><a name="population-density-n872" class="md-header-anchor"></a><span>Population Density</span></h5><ul><li></li></ul><h5><a name="religious-beliefs-n876" class="md-header-anchor"></a><span>Religious Beliefs</span></h5><ul><li></li></ul><h3><a name="military-n880" class="md-header-anchor"></a><span>Military</span></h3><h5><a name="maximum-military-manpower-n881" class="md-header-anchor"></a><span>Maximum Military Manpower</span></h5><ul><li></li></ul><h5><a name="treaties-and-agreements-n885" class="md-header-anchor"></a><span>Treaties and Agreements</span></h5><ul><li></li></ul><h5><a name="military-equipment-n889" class="md-header-anchor"></a><span>Military Equipment</span></h5><ul><li></li></ul><h5><a name="military-service-requirements-n893" class="md-header-anchor"></a><span>Military Service Requirements</span></h5><ul><li></li></ul><h3><a name="economy-n897" class="md-header-anchor"></a><span>Economy</span></h3><h5><a name="unemployment-rate-n898" class="md-header-anchor"></a><span>Unemployment Rate</span></h5><ul><li></li></ul><h5><a name="poverty-rate-n902" class="md-header-anchor"></a><span>Poverty Rate</span></h5><ul><li></li></ul><h5><a name="literacy-rate-n906" class="md-header-anchor"></a><span>Literacy Rate</span></h5><ul><li></li></ul><h5><a name="technological-capability-n910" class="md-header-anchor"></a><span>Technological Capability</span></h5><ul><li></li></ul><h5><a name="natural-resources-n914" class="md-header-anchor"></a><span>Natural Resources</span></h5><ul><li></li></ul><h5><a name="currency-n918" class="md-header-anchor"></a><span>Currency</span></h5><ul><li></li></ul><h3><a name="culture-n922" class="md-header-anchor"></a><span>Culture</span></h3><h5><a name="child-rearing-n923" class="md-header-anchor"></a><span>Child Rearing</span></h5><ul><li></li></ul><h5><a name="names-n927" class="md-header-anchor"></a><span>Names</span></h5><ul><li></li></ul><h5><a name="earning-n931" class="md-header-anchor"></a><span>Earning</span></h5><ul><li></li></ul><h5><a name="learning-n935" class="md-header-anchor"></a><span>Learning</span></h5><ul><li></li></ul><h5><a name="style-n939" class="md-header-anchor"></a><span>Style</span></h5><ul><li></li></ul><h5><a name="language-n943" class="md-header-anchor"></a><span>Language</span></h5><ul><li><ul><li></li><li></li></ul></li></ul><h5><a name="stereotypes-n952" class="md-header-anchor"></a><span>Stereotypes</span></h5><ul><li></li></ul><h3><a name="potential-conflict-n956" class="md-header-anchor"></a><span>Potential Conflict</span></h3><p>&nbsp;</p><hr /><h2><a name="eruditia" class="md-header-anchor"></a><span>Eruditia</span></h2><blockquote><p><span>A harsh magocratic technocracy with an utterly alien culture to the rest of the world, Eruditia is ruled by a small collection of powerful mages, known as the nobility, who live in the floating Citadel.</span></p></blockquote><p><span>There is one driving purpose: learning. To that end, all Erudites are given a generous stipend, and if they are magically talented, given nearly free reign to research their chosen pursuits. Further resources are provided with sufficient justification, and results are highly valued. With significant accomplishments, one might join the ranks of the nobility. </span></p><p><span>For normal people, it may be said that &quot;upon the event of your death, you are dead.&quot; Not so for the nobility of Eruditia, whose contributions to the knowledge and understanding of reality are more valued than their humanity. Upon death, the nobility take over the bodies of unproductive members of society in order to continue their work indefinitely.</span></p><h3><a name="geography-n963" class="md-header-anchor"></a><span>Geography</span></h3><h5><a name="size-n964" class="md-header-anchor"></a><span>Size</span></h5><ul><li><span>Approximately the size of Syria at ~186,000 km² or ~72,000 mi².</span></li></ul><h5><a name="borders-n968" class="md-header-anchor"></a><span>Borders</span></h5><ul><li><span>Bordered by oceans to the north and south, Mondra to the east and Rizeli to the west.</span></li></ul><h5><a name="biomes-n972" class="md-header-anchor"></a><span>Biomes</span></h5><ul><li></li></ul><h5><a name="weather-patterns-n976" class="md-header-anchor"></a><span>Weather patterns</span></h5><ul><li></li></ul><h3><a name="population-n980" class="md-header-anchor"></a><span>Population</span></h3><h5><a name="total-population-n981" class="md-header-anchor"></a><span>Total Population</span></h5><ul><li><span>2.8 Million?</span></li></ul><h5><a name="life-expectancy-n985" class="md-header-anchor"></a><span>Life Expectancy</span></h5><ul><li><span>35 Male, 35 Female.</span></li><li><span>People tend to spend their allocated resources freely for a few decades before starving or being cannibalized.</span></li></ul><h5><a name="average-children-per-family-n991" class="md-header-anchor"></a><span>Average Children per Family</span></h5><ul><li><span>0.</span></li><li><span>There are no families. All children are raised in nurseries.</span></li></ul><h5><a name="population-density-n997" class="md-header-anchor"></a><span>Population Density</span></h5><ul><li><span>100% urban. Material needs are met to a point by initially allocated resources and magical manufacturing, so people tend to stay in the cities where it’s safe.</span></li></ul><h5><a name="religious-beliefs-n1001" class="md-header-anchor"></a><span>Religious Beliefs</span></h5><ul><li><span>90% belief in the official religion, 2% pagan, 4% agnostic, 4% atheist.</span></li><li></li></ul><h3><a name="military-n1007" class="md-header-anchor"></a><span>Military</span></h3><h5><a name="maximum-military-manpower-n1008" class="md-header-anchor"></a><span>Maximum Military Manpower</span></h5><ul><li><span>58% of the population.</span></li><li><span>Although there are those who are incapable of serving physically or magically, everyone who is able in at least one of the two is expected to take up arms when called for.</span></li></ul><h5><a name="treaties-and-agreements-n1014" class="md-header-anchor"></a><span>Treaties and Agreements</span></h5><ul><li><span>The country’s diplomatic policy is very hands off. They basically don’t bother their neighbors and their neighbors don’t bother them.</span></li></ul><h5><a name="military-equipment-n1018" class="md-header-anchor"></a><span>Military Equipment</span></h5><ul><li><span>Military equipment is modern and regularly maintained.</span></li></ul><h5><a name="military-service-requirements-n1022" class="md-header-anchor"></a><span>Military Service Requirements</span></h5><ul><li><span>Military service is not mandatory outside of war.</span></li></ul><h3><a name="economy-n1026" class="md-header-anchor"></a><span>Economy</span></h3><h5><a name="unemployment-rate-n1027" class="md-header-anchor"></a><span>Unemployment Rate</span></h5><ul><li><span>47%.</span></li><li><span>Those in the Citadel are all employed somehow, either in government positions, as students, supporting infrastructure, et cetera. Those on the ground do sometimes choose to work, but most of their needs are seen to until they use up their resources.</span></li></ul><h5><a name="poverty-rate-n1033" class="md-header-anchor"></a><span>Poverty Rate</span></h5><ul><li><span>0%.</span></li><li><span>They all have access to plentiful resources, but those who run out quickly die of starvation or are cannibalized.</span></li></ul><h5><a name="literacy-rate-n1039" class="md-header-anchor"></a><span>Literacy Rate</span></h5><ul><li><span>100%.</span></li><li><span>Everyone is educated growing up in a nursery.</span></li></ul><h5><a name="technological-capability-n1045" class="md-header-anchor"></a><span>Technological Capability</span></h5><ul><li><span>Technological capability is above average due to inclination towards innovation.</span></li></ul><h5><a name="natural-resources-n1049" class="md-header-anchor"></a><span>Natural Resources</span></h5><ul><li><span>Natural resources are outsourced and include: ... almost everything</span></li></ul><h5><a name="currency-n1053" class="md-header-anchor"></a><span>Currency</span></h5><ul><li><span>None.</span></li></ul><h3><a name="culture-n1057" class="md-header-anchor"></a><span>Culture</span></h3><h5><a name="child-rearing-n1058" class="md-header-anchor"></a><span>Child Rearing</span></h5><ul><li><span>Every Erudite is raised in a collective nursery, not by their biological parents. Here they are educated on their history and purpose, as well as general subjects including mathematics, science, linguistics, art, and more. And of course, they are all tested for magical aptitude.</span></li></ul><h5><a name="names-n1062" class="md-header-anchor"></a><span>Names</span></h5><ul><li><p><span>Erudites are given a name by the nursery they grew up in, the year they were born, and a changeable name that eventually settles as they grow, usually as something they are known for.</span></p><ul><li><span>For example, one might be named “Unomi 5333 Wiseman” for being raised in nursery Unomi in 5333 and being particularly wise. Successful members of the Academy are also given names for their success, usually corresponding to their specialty, such as “the Negotiator.”</span></li></ul></li></ul><h5><a name="earning-n1069" class="md-header-anchor"></a><span>Earning</span></h5><ul><li><span>Erudites are all allocated the same resources to start with, accessible by request, which they may use freely for the rest of their lives. Nobody uses money.</span></li></ul><h5><a name="learning-n1073" class="md-header-anchor"></a><span>Learning</span></h5><ul><li><p><span>Everyone is taught the basics of magic if they can manage it.</span></p><ul><li><span>Those who are not talented with magic may live out their natural lives on the ground. They may at any time be utilized by mages in the pursuit of progress.</span></li><li><span>Those who can use magic proficiently are brought to the Academy in the Citadel to learn and advance understanding, although there is significant self study to encourage unique and original perspectives.</span></li></ul></li></ul><h5><a name="style-n1082" class="md-header-anchor"></a><span>Style</span></h5><ul><li><span>There is little official unity in fashion, arts, or craftsmanship. Originality, utility, and advancement are highly valued.</span></li></ul><h5><a name="language-n1086" class="md-header-anchor"></a><span>Language</span></h5><ul><li><span>Earthly Erudite mostly speak Mondri.</span></li><li><span>Most educated Erudites are literate in multiple foreign languages but increasingly, with rank, education, and age, they tend to use a strange form of telepathy to facilitate extremely rapid and exact communication. This unique telepathy is not taught, but rather learned through exposure, and can be difficult-to-excruciating to receive and understand if unskilled.</span></li></ul><h5><a name="stereotypes-n1092" class="md-header-anchor"></a><span>Stereotypes</span></h5><ul><li><span>Erudites are often stereotyped as being reckless and blunt.</span></li></ul><h3><a name="potential-conflict-n1096" class="md-header-anchor"></a><span>Potential Conflict</span></h3><p>&nbsp;</p><hr /><h2><a name="rizeli" class="md-header-anchor"></a><span>Rizeli</span></h2><h3><a name="geography-n1099" class="md-header-anchor"></a><span>Geography</span></h3><h5><a name="size-n1100" class="md-header-anchor"></a><span>Size</span></h5><ul><li><span>Approximately the size of Venezuela at ~896,000 km² or ~346,000 mi².</span></li></ul><h5><a name="borders-n1104" class="md-header-anchor"></a><span>Borders</span></h5><ul><li><span>Bordered by Eruditia to the east, oceans to the north, and south, and with Peddler’s Port and Monstadt a few hundred miles across the water to the west.</span></li></ul><h5><a name="biomes-n1108" class="md-header-anchor"></a><span>Biomes</span></h5><ul><li></li></ul><h5><a name="weather-patterns-n1112" class="md-header-anchor"></a><span>Weather patterns</span></h5><ul><li></li></ul><h3><a name="population-n1116" class="md-header-anchor"></a><span>Population</span></h3><h5><a name="total-population-n1117" class="md-header-anchor"></a><span>Total Population</span></h5><ul><li></li></ul><h5><a name="life-expectancy-n1121" class="md-header-anchor"></a><span>Life Expectancy</span></h5><ul><li></li></ul><h5><a name="average-children-per-family-n1125" class="md-header-anchor"></a><span>Average Children per Family</span></h5><ul><li></li></ul><h5><a name="population-density-n1129" class="md-header-anchor"></a><span>Population Density</span></h5><ul><li></li></ul><h5><a name="religious-beliefs-n1133" class="md-header-anchor"></a><span>Religious Beliefs</span></h5><ul><li></li></ul><h3><a name="military-n1137" class="md-header-anchor"></a><span>Military</span></h3><h5><a name="maximum-military-manpower-n1138" class="md-header-anchor"></a><span>Maximum Military Manpower</span></h5><ul><li></li></ul><h5><a name="treaties-and-agreements-n1142" class="md-header-anchor"></a><span>Treaties and Agreements</span></h5><ul><li></li></ul><h5><a name="military-equipment-n1146" class="md-header-anchor"></a><span>Military Equipment</span></h5><ul><li></li></ul><h5><a name="military-service-requirements-n1150" class="md-header-anchor"></a><span>Military Service Requirements</span></h5><ul><li></li></ul><h3><a name="economy-n1154" class="md-header-anchor"></a><span>Economy</span></h3><h5><a name="unemployment-rate-n1155" class="md-header-anchor"></a><span>Unemployment Rate</span></h5><ul><li></li></ul><h5><a name="poverty-rate-n1159" class="md-header-anchor"></a><span>Poverty Rate</span></h5><ul><li></li></ul><h5><a name="literacy-rate-n1163" class="md-header-anchor"></a><span>Literacy Rate</span></h5><ul><li></li></ul><h5><a name="technological-capability-n1167" class="md-header-anchor"></a><span>Technological Capability</span></h5><ul><li></li></ul><h5><a name="natural-resources-n1171" class="md-header-anchor"></a><span>Natural Resources</span></h5><ul><li></li></ul><h5><a name="currency-n1175" class="md-header-anchor"></a><span>Currency</span></h5><ul><li></li></ul><h3><a name="culture-n1179" class="md-header-anchor"></a><span>Culture</span></h3><h5><a name="child-rearing-n1180" class="md-header-anchor"></a><span>Child Rearing</span></h5><ul><li></li></ul><h5><a name="names-n1184" class="md-header-anchor"></a><span>Names</span></h5><ul><li></li></ul><h5><a name="earning-n1188" class="md-header-anchor"></a><span>Earning</span></h5><ul><li></li></ul><h5><a name="learning-n1192" class="md-header-anchor"></a><span>Learning</span></h5><ul><li></li></ul><h5><a name="style-n1196" class="md-header-anchor"></a><span>Style</span></h5><ul><li></li></ul><h5><a name="language-n1200" class="md-header-anchor"></a><span>Language</span></h5><ul><li><ul><li></li><li></li></ul></li></ul><h5><a name="stereotypes-n1209" class="md-header-anchor"></a><span>Stereotypes</span></h5><ul><li></li></ul><h3><a name="potential-conflict-n1213" class="md-header-anchor"></a><span>Potential Conflict</span></h3><p>&nbsp;</p><hr /><h2><a name="monstadt" class="md-header-anchor"></a><span>Monstadt</span></h2><h3><a name="geography-n1216" class="md-header-anchor"></a><span>Geography</span></h3><h5><a name="size-n1217" class="md-header-anchor"></a><span>Size</span></h5><ul><li><span>Approximately the size of the Philippines at ~295,000 km² or ~114,000 mi².</span></li></ul><h5><a name="borders-n1221" class="md-header-anchor"></a><span>Borders</span></h5><ul><li><span>Bordered by oceans to the oceans to the south and west, with Rizeli and Peddler’s Isle a few hundred miles across the water to the west and north, respectively.</span></li></ul><h5><a name="weather-patterns-n1225" class="md-header-anchor"></a><span>Weather patterns</span></h5><ul><li></li></ul><h3><a name="population-n1229" class="md-header-anchor"></a><span>Population</span></h3><h5><a name="total-population-n1230" class="md-header-anchor"></a><span>Total Population</span></h5><ul><li></li></ul><h5><a name="life-expectancy-n1234" class="md-header-anchor"></a><span>Life Expectancy</span></h5><ul><li></li></ul><h5><a name="average-children-per-family-n1238" class="md-header-anchor"></a><span>Average Children per Family</span></h5><ul><li></li></ul><h5><a name="population-density-n1242" class="md-header-anchor"></a><span>Population Density</span></h5><ul><li></li></ul><h5><a name="religious-beliefs-n1246" class="md-header-anchor"></a><span>Religious Beliefs</span></h5><ul><li></li></ul><h3><a name="military-n1250" class="md-header-anchor"></a><span>Military</span></h3><h5><a name="maximum-military-manpower-n1251" class="md-header-anchor"></a><span>Maximum Military Manpower</span></h5><ul><li></li></ul><h5><a name="treaties-and-agreements-n1255" class="md-header-anchor"></a><span>Treaties and Agreements</span></h5><ul><li></li></ul><h5><a name="military-equipment-n1259" class="md-header-anchor"></a><span>Military Equipment</span></h5><ul><li></li></ul><h5><a name="military-service-requirements-n1263" class="md-header-anchor"></a><span>Military Service Requirements</span></h5><ul><li></li></ul><h3><a name="economy-n1267" class="md-header-anchor"></a><span>Economy</span></h3><h5><a name="unemployment-rate-n1268" class="md-header-anchor"></a><span>Unemployment Rate</span></h5><ul><li></li></ul><h5><a name="poverty-rate-n1272" class="md-header-anchor"></a><span>Poverty Rate</span></h5><ul><li></li></ul><h5><a name="literacy-rate-n1276" class="md-header-anchor"></a><span>Literacy Rate</span></h5><ul><li></li></ul><h5><a name="technological-capability-n1280" class="md-header-anchor"></a><span>Technological Capability</span></h5><ul><li></li></ul><h5><a name="natural-resources-n1284" class="md-header-anchor"></a><span>Natural Resources</span></h5><ul><li></li></ul><h5><a name="currency-n1288" class="md-header-anchor"></a><span>Currency</span></h5><ul><li></li></ul><h3><a name="culture-n1292" class="md-header-anchor"></a><span>Culture</span></h3><h5><a name="child-rearing-n1293" class="md-header-anchor"></a><span>Child Rearing</span></h5><ul><li></li></ul><h5><a name="names-n1297" class="md-header-anchor"></a><span>Names</span></h5><ul><li></li></ul><h5><a name="earning-n1301" class="md-header-anchor"></a><span>Earning</span></h5><ul><li></li></ul><h5><a name="learning-n1305" class="md-header-anchor"></a><span>Learning</span></h5><ul><li></li></ul><h5><a name="style-n1309" class="md-header-anchor"></a><span>Style</span></h5><ul><li></li></ul><h5><a name="language-n1313" class="md-header-anchor"></a><span>Language</span></h5><ul><li><ul><li></li><li></li></ul></li></ul><h5><a name="stereotypes-n1322" class="md-header-anchor"></a><span>Stereotypes</span></h5><ul><li></li></ul><h3><a name="potential-conflict-n1326" class="md-header-anchor"></a><span>Potential Conflict</span></h3><p>&nbsp;</p><hr /><h2><a name="peddlers-isle" class="md-header-anchor"></a><span>Peddlers&#39; Isle</span></h2><h3><a name="geography-n1329" class="md-header-anchor"></a><span>Geography</span></h3><h5><a name="size-n1330" class="md-header-anchor"></a><span>Size</span></h5><ul><li><span>Approximately the size of Morocco at ~446,000 km² or ~172,000 mi².</span></li></ul><h5><a name="borders-n1334" class="md-header-anchor"></a><span>Borders</span></h5><ul><li><span>Bordered by oceans to the north and west, with Monstadt and Rizeli a few hundred miles across the water to the south and east, respectively.</span></li></ul><h5><a name="weather-patterns-n1338" class="md-header-anchor"></a><span>Weather patterns</span></h5><ul><li></li></ul><h3><a name="population-n1342" class="md-header-anchor"></a><span>Population</span></h3><h5><a name="total-population-n1343" class="md-header-anchor"></a><span>Total Population</span></h5><ul><li></li></ul><h5><a name="life-expectancy-n1347" class="md-header-anchor"></a><span>Life Expectancy</span></h5><ul><li></li></ul><h5><a name="average-children-per-family-n1351" class="md-header-anchor"></a><span>Average Children per Family</span></h5><ul><li></li></ul><h5><a name="population-density-n1355" class="md-header-anchor"></a><span>Population Density</span></h5><ul><li></li></ul><h5><a name="religious-beliefs-n1359" class="md-header-anchor"></a><span>Religious Beliefs</span></h5><ul><li></li></ul><h3><a name="military-n1363" class="md-header-anchor"></a><span>Military</span></h3><h5><a name="maximum-military-manpower-n1364" class="md-header-anchor"></a><span>Maximum Military Manpower</span></h5><ul><li></li></ul><h5><a name="treaties-and-agreements-n1368" class="md-header-anchor"></a><span>Treaties and Agreements</span></h5><ul><li></li></ul><h5><a name="military-equipment-n1372" class="md-header-anchor"></a><span>Military Equipment</span></h5><ul><li></li></ul><h5><a name="military-service-requirements-n1376" class="md-header-anchor"></a><span>Military Service Requirements</span></h5><ul><li></li></ul><h3><a name="economy-n1380" class="md-header-anchor"></a><span>Economy</span></h3><h5><a name="unemployment-rate-n1381" class="md-header-anchor"></a><span>Unemployment Rate</span></h5><ul><li></li></ul><h5><a name="poverty-rate-n1385" class="md-header-anchor"></a><span>Poverty Rate</span></h5><ul><li></li></ul><h5><a name="literacy-rate-n1389" class="md-header-anchor"></a><span>Literacy Rate</span></h5><ul><li></li></ul><h5><a name="technological-capability-n1393" class="md-header-anchor"></a><span>Technological Capability</span></h5><ul><li></li></ul><h5><a name="natural-resources-n1397" class="md-header-anchor"></a><span>Natural Resources</span></h5><ul><li></li></ul><h5><a name="currency-n1401" class="md-header-anchor"></a><span>Currency</span></h5><ul><li></li></ul><h3><a name="culture-n1405" class="md-header-anchor"></a><span>Culture</span></h3><h5><a name="child-rearing-n1406" class="md-header-anchor"></a><span>Child Rearing</span></h5><ul><li></li></ul><h5><a name="names-n1410" class="md-header-anchor"></a><span>Names</span></h5><ul><li></li></ul><h5><a name="earning-n1414" class="md-header-anchor"></a><span>Earning</span></h5><ul><li></li></ul><h5><a name="learning-n1418" class="md-header-anchor"></a><span>Learning</span></h5><ul><li></li></ul><h5><a name="style-n1422" class="md-header-anchor"></a><span>Style</span></h5><ul><li></li></ul><h5><a name="language-n1426" class="md-header-anchor"></a><span>Language</span></h5><ul><li><ul><li></li><li></li></ul></li></ul><h5><a name="stereotypes-n1435" class="md-header-anchor"></a><span>Stereotypes</span></h5><ul><li></li></ul><h3><a name="potential-conflict-n1439" class="md-header-anchor"></a><span>Potential Conflict</span></h3></div>
+</body>
+</html>
