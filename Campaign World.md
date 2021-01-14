@@ -27,7 +27,7 @@ like a theocratic country headed by a prophet or god/goddess, an industrial coun
 
 The current King of External Affairs and Queen of Internal Affairs are married and hold as little real political power as their many predecessors have for as long as most can remember. They want to restore the crown's weight and the glory of their country in foreign countries' eyes.
 
-### Geography
+#### Geography
 
 ##### Size
 
@@ -45,7 +45,7 @@ The current King of External Affairs and Queen of Internal Affairs are married a
 
 - Usually warm and sunny with regular rainfall. Temperatures average between 54℉ and 64℉ across most of the country except for in the tropical rainforest, where it averages 72℉.
 
-### Population
+#### Population
 
 ##### Total Population
 
@@ -72,7 +72,7 @@ The current King of External Affairs and Queen of Internal Affairs are married a
 - The most prominent gods are those of the sun and moon, the two favoring the diarchy of external and internal affairs, respectively.
 - Other prominent gods include the god of wealth and the god of justice.
 
-### Military
+#### Military
 
 ##### Maximum Military Manpower
 
@@ -90,7 +90,7 @@ The current King of External Affairs and Queen of Internal Affairs are married a
 
 - Adults can volunteer for military service.
 
-### Economy
+#### Economy
 
 ##### Unemployment Rate
 
@@ -121,7 +121,7 @@ The current King of External Affairs and Queen of Internal Affairs are married a
   - 1 Noble = 12 Strata
   - Denominations of 1, 2, and 6 for all. A loaf of bread is ~2 Stratum, a lamb is ~8 Nobles, shoes about the same, slaves ~200-300 Nobles, houses 400-1,000 Nobles.
 
-### Culture
+#### Culture
 
 > In Rive, money can buy everything but happiness, and gold and gems flow like water.
 
@@ -210,7 +210,7 @@ The Empire has only in the last 30 years come out of a rather strict isolationis
 
 History checks can be emphasized in this country to follow the customs and traditions appropriately.
 
-### Geography
+#### Geography
 
 ##### Size
 
@@ -228,7 +228,7 @@ History checks can be emphasized in this country to follow the customs and tradi
 
 - Cool and sunny most days with regular light rain across most of the country, although temperatures average 80℉ nearer the equator.
 
-### Population
+#### Population
 
 ##### Total Population
 
@@ -253,7 +253,7 @@ History checks can be emphasized in this country to follow the customs and tradi
 - 86% belief in the official religion, 12% minor, 1% agnostic,1% atheist.
 - The official religion considers the Emperor as divinely appointed and duty-bound, so his words are equal to the gods’.
 
-### Military
+#### Military
 
 ##### Maximum Military Manpower
 
@@ -271,7 +271,7 @@ History checks can be emphasized in this country to follow the customs and tradi
 
 - There is mandatory military service for all adult males.
 
-### Economy
+#### Economy
 
 ##### Unemployment Rate
 
@@ -302,7 +302,7 @@ History checks can be emphasized in this country to follow the customs and tradi
 - 1 bu = 4 shu = 23 Strata
 - 1 shu = 16 mon = 5.75 Strata
 
-### Culture
+Culture
 
 > In Rive, money can buy everything but happiness, and gold and gems flow like water.
 
@@ -442,7 +442,7 @@ A young democratic republic, only a hundred years old, with the highest position
 - She did not treat her fallen enemies cruely, outlawed slavery altogether, and encouraged mixing cultures and people to unify the people.
 - When she had conquered enough, she wrote that she should be succeeded through election, and died 6 years thereafter. Every president since has had a single 6 year term, elected as currently through convention.
 
-### Geography
+#### Geography
 
 ##### Size
 
@@ -460,7 +460,7 @@ A young democratic republic, only a hundred years old, with the highest position
 
 - Cool all year, average 48℉ with equal sunny and rainy days.
 
-### Population
+#### Population
 
 ##### Total Population
 
@@ -484,7 +484,7 @@ A young democratic republic, only a hundred years old, with the highest position
 
 - 24% belief in major religion, 56% pagan, 16% agnostic, 4% atheist.
 
-### Military
+#### Military
 
 ##### Maximum Military Manpower
 
@@ -502,7 +502,7 @@ A young democratic republic, only a hundred years old, with the highest position
 
 - Military service is voluntary for adults.
 
-### Economy
+#### Economy
 
 ##### Unemployment Rate
 
@@ -529,7 +529,7 @@ A young democratic republic, only a hundred years old, with the highest position
 - Variously sized coins of mixed iron, copper, and tin. 
   - 1 Blic = 1.33 (4/3) Strata = 3.71 (256/69) mon
 
-### Culture
+#### Culture
 
 ##### Child Rearing
 
@@ -577,7 +577,7 @@ The mayor has become a hard man through experience, and he sees that if he lets 
 
 Clans are tight-knit groups of people, families, who govern and defend themselves from other clans. Isolationism varies by clan, but so does a lot of culture. The only consistency is that all clans have powerful warriors to protect themselves. For the most part, they also agree on simple rules of warfare such as “don’t burn crop fields or kill civilians,” but accidents happen.
 
-### Geography
+#### Geography
 
 ##### Size
 
@@ -595,7 +595,7 @@ Clans are tight-knit groups of people, families, who govern and defend themselve
 
 - Cool to cold, average 41℉ annually, with light rain inland and heavy rain near the coast.
 
-### Population
+#### Population
 
 ##### Total Population
 
@@ -617,7 +617,7 @@ Clans are tight-knit groups of people, families, who govern and defend themselve
 
 - 
 
-### Military
+#### Military
 
 ##### Maximum Military Manpower
 
@@ -635,7 +635,7 @@ Clans are tight-knit groups of people, families, who govern and defend themselve
 
 - 
 
-### Economy
+#### Economy
 
 ##### Unemployment Rate
 
@@ -661,7 +661,7 @@ Clans are tight-knit groups of people, families, who govern and defend themselve
 
 - 
 
-### Culture
+#### Culture
 
 ##### Child Rearing
 
@@ -707,7 +707,7 @@ The people love the current King, ——, whose progressive policies and honorab
 
 The current princess, —–, is young and full of energy, and her father fully intends for her to rule instead of letting her future husband take control. Reactions to this decision range from unsettled to enraged, more negatively from guilds and nobles. It may incense a coup or cause significant civil unrest as political dissidents seek to undermine or remove the princess.
 
-### Geography
+#### Geography
 
 ##### Size
 
@@ -725,7 +725,7 @@ The current princess, —–, is young and full of energy, and her father fully 
 
 - 
 
-### Population
+#### Population
 
 ##### Total Population
 
@@ -747,7 +747,7 @@ The current princess, —–, is young and full of energy, and her father fully 
 
 - 
 
-### Military
+#### Military
 
 ##### Maximum Military Manpower
 
@@ -765,7 +765,7 @@ The current princess, —–, is young and full of energy, and her father fully 
 
 - 
 
-### Economy
+#### Economy
 
 ##### Unemployment Rate
 
@@ -791,7 +791,7 @@ The current princess, —–, is young and full of energy, and her father fully 
 
 - 
 
-### Culture
+#### Culture
 
 ##### Child Rearing
 
@@ -835,7 +835,7 @@ The current princess, —–, is young and full of energy, and her father fully 
 
 This is, of course, if you ignore the slaves under the floor of the bus casting magic to keep it going, or the human batteries of the floating island.
 
-### Geography
+#### Geography
 
 ##### Size
 
@@ -853,7 +853,7 @@ This is, of course, if you ignore the slaves under the floor of the bus casting 
 
 - 
 
-### Population
+#### Population
 
 ##### Total Population
 
@@ -875,7 +875,7 @@ This is, of course, if you ignore the slaves under the floor of the bus casting 
 
 - 
 
-### Military
+#### Military
 
 ##### Maximum Military Manpower
 
@@ -893,7 +893,7 @@ This is, of course, if you ignore the slaves under the floor of the bus casting 
 
 - 
 
-### Economy
+#### Economy
 
 ##### Unemployment Rate
 
@@ -919,7 +919,7 @@ This is, of course, if you ignore the slaves under the floor of the bus casting 
 
 - 
 
-### Culture
+#### Culture
 
 ##### Child Rearing
 
@@ -965,7 +965,7 @@ There is one driving purpose: learning. To that end, all Erudites are given a ge
 
 For normal people, it may be said that "upon the event of your death, you are dead." Not so for the nobility of Eruditia, whose contributions to the knowledge and understanding of reality are more valued than their humanity. Upon death, the nobility take over the bodies of unproductive members of society in order to continue their work indefinitely.
 
-### Geography
+#### Geography
 
 ##### Size
 
@@ -983,7 +983,7 @@ For normal people, it may be said that "upon the event of your death, you are de
 
 - 
 
-### Population
+#### Population
 
 ##### Total Population
 
@@ -1008,7 +1008,7 @@ For normal people, it may be said that "upon the event of your death, you are de
 - 90% belief in the official religion, 2% pagan, 4% agnostic, 4% atheist.
 - 
 
-### Military
+#### Military
 
 ##### Maximum Military Manpower
 
@@ -1027,7 +1027,7 @@ For normal people, it may be said that "upon the event of your death, you are de
 
 - Military service is not mandatory outside of war.
 
-### Economy
+#### Economy
 
 ##### Unemployment Rate
 
@@ -1056,7 +1056,7 @@ For normal people, it may be said that "upon the event of your death, you are de
 
 - None.
 
-### Culture
+#### Culture
 
 ##### Child Rearing
 
@@ -1098,7 +1098,7 @@ For normal people, it may be said that "upon the event of your death, you are de
 
 ## Rizeli
 
-### Geography
+#### Geography
 
 ##### Size
 
@@ -1116,7 +1116,7 @@ For normal people, it may be said that "upon the event of your death, you are de
 
 - 
 
-### Population
+#### Population
 
 ##### Total Population
 
@@ -1138,7 +1138,7 @@ For normal people, it may be said that "upon the event of your death, you are de
 
 - 
 
-### Military
+#### Military
 
 ##### Maximum Military Manpower
 
@@ -1156,7 +1156,7 @@ For normal people, it may be said that "upon the event of your death, you are de
 
 - 
 
-### Economy
+#### Economy
 
 ##### Unemployment Rate
 
@@ -1182,7 +1182,7 @@ For normal people, it may be said that "upon the event of your death, you are de
 
 - 
 
-### Culture
+#### Culture
 
 ##### Child Rearing
 
@@ -1222,7 +1222,7 @@ For normal people, it may be said that "upon the event of your death, you are de
 
 ## Monstadt
 
-### Geography
+#### Geography
 
 ##### Size
 
@@ -1236,7 +1236,7 @@ For normal people, it may be said that "upon the event of your death, you are de
 
 - 
 
-### Population
+#### Population
 
 ##### Total Population
 
@@ -1258,7 +1258,7 @@ For normal people, it may be said that "upon the event of your death, you are de
 
 - 
 
-### Military
+#### Military
 
 ##### Maximum Military Manpower
 
@@ -1276,7 +1276,7 @@ For normal people, it may be said that "upon the event of your death, you are de
 
 - 
 
-### Economy
+#### Economy
 
 ##### Unemployment Rate
 
@@ -1302,7 +1302,7 @@ For normal people, it may be said that "upon the event of your death, you are de
 
 - 
 
-### Culture
+#### Culture
 
 ##### Child Rearing
 
@@ -1342,7 +1342,7 @@ For normal people, it may be said that "upon the event of your death, you are de
 
 ## Peddlers' Isle
 
-### Geography
+#### Geography
 
 ##### Size
 
@@ -1356,7 +1356,7 @@ For normal people, it may be said that "upon the event of your death, you are de
 
 - 
 
-### Population
+#### Population
 
 ##### Total Population
 
@@ -1378,7 +1378,7 @@ For normal people, it may be said that "upon the event of your death, you are de
 
 - 
 
-### Military
+#### Military
 
 ##### Maximum Military Manpower
 
@@ -1396,7 +1396,7 @@ For normal people, it may be said that "upon the event of your death, you are de
 
 - 
 
-### Economy
+#### Economy
 
 ##### Unemployment Rate
 
@@ -1422,7 +1422,7 @@ For normal people, it may be said that "upon the event of your death, you are de
 
 - 
 
-### Culture
+#### Culture
 
 ##### Child Rearing
 
