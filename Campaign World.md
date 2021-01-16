@@ -1,3 +1,16 @@
+# Welcome... to The World!
+
+### Who's Interested?
+
+1. Cy
+2. Souleymane
+3. Greg
+4. LePear
+5. Trent
+6. Alex
+7. bloosie
+8. Inspire
+
 ### Preliminary Map:
 
 ![img](https://lh6.googleusercontent.com/oIW9NqC7drTaE7cv_VCg2UyOGdV_XCXrjLVBxO5hM12x1MhI1yr6Fi8_6gyqEGOuhmYTYSrQ4UIBAmhQa5SQty2I_sL35sb0PQvVUEHPMrBbtcgLziq6lZhrpH-T4siNXUIBC09o)![img](https://lh3.googleusercontent.com/C1ZfU5J6dSMclNz-JB0jpfwns84jvY8ZXpP7pVxAq5BNHYe1Kz8d7XSj7UyvPOoY7-BtvMKokAsw-i7dcwD9MPED0ZJGiFesE1F3Ins8kVoqCgpQM_Jvet6BwqylUEwfPn2bgQsK)![img](https://lh5.googleusercontent.com/p_iWvU7lffAFIzqmYETldoui5CuN_7F4gThvTC-YNvxWo13KRVBqi2v-F_0hpR6Nz5KHu4UdiIHn6-E8uYrHK8PJnOPycYDau9UT_xTpjQXRFmqP2yD0zOWQ46pgGeJzVollj83e)
@@ -150,7 +163,7 @@ Rive is well known for its megalithic structures, artistic writing, vibrant text
 ##### Language
 
 - Riven largely speak Riven, though traveling merchants and wealthy and educated people tend to be at least literate in one or more other languages. The language, like the nation, is focused on wealth, so the worth of a noun, monetary or otherwise, is built into the way they are said, just like verb tenses are in English.
-  - Riven is an agglutinative subject-object-verb language, and its words tend to be one to three syllables.
+  - Riven is an agglutinative verb-subject-object language, and its words tend to be one to three syllables.
   - It’s written either of two ways, logographic or phonetic scripts. The logograms depict a wide variety of images, similar to hieroglyphs. The phonetic script looks like a long and decorated line of ink, such as tibetan or arabic scripts. Both are written with quill, or carved into clay or stone.
 
 ##### Stereotypes
@@ -200,7 +213,7 @@ Rive is well known for its megalithic structures, artistic writing, vibrant text
 
 ## Austere Empire
 
-> An Asian themed country with complicated and esoteric etiquette, customs, traditions, religion, and more. It’s also slightly xenophobic and isolationist.
+> An East Asian themed country with complicated and esoteric etiquette, customs, traditions, religion, and more. It’s also slightly xenophobic and isolationist.
 
 The Empire has only in the last 30 years come out of a rather strict isolationist policy maintained over the previous 3 emperors, or 140 years. Hence, it’s borders will be open to travelers for business and pleasure. However, this has not completely changed peoples’ opinions of foreigners, so some people may reject them, especially in and around the capital city.
 
@@ -302,7 +315,7 @@ History checks can be emphasized in this country to follow the customs and tradi
 - 1 bu = 4 shu = 23 Strata
 - 1 shu = 16 mon = 5.75 Strata
 
-Culture
+#### Culture
 
 > In Rive, money can buy everything but happiness, and gold and gems flow like water.
 
@@ -335,7 +348,7 @@ Culture
 ##### Language
 
 - Austere people speak Austere, though a few state employees and traveling salesmen speak other languages. This is a language that emphasizes nuance and respect, with a word for every family member, and a number of formal and informal honorifics.
-  - It’s an analytic language with a subject-verb-object basic word order. It’s also tonal, so pitch is important for distinguishing syllables.
+  - Austere is an analytic language with a subject-verb-object basic word order. It’s also tonal, so pitch is important for distinguishing syllables.
   - It’s written with a mix of phonetic and logographic scripts with a brush and ink.
 
 ##### Stereotypes
@@ -431,16 +444,13 @@ The 11th Son, 4th Concubine, 4 years - 11th in line for the throne,
 
 ## Croft Republic
 
-A young democratic republic, only a hundred years old, with the highest position of “President.”
-
-- Each town is part of a “region,” which is part of a “territory,” which is part of the Croft Republic. Regional and territorial administrative officials are elected by locals or appointed by the president, and regional and territorial leaders elect the president.
-- The President is practically a King for their years in office, except when their decisions are overruled by more than half of the territorial leaders in peacetime. In wartime, they have supreme power.
-
-120 years ago, this land was a mess of squabbling minor countries not unlike the feuding clan territory to the north, but eventually it was united through conquest.
+>  A young democratic republic, only a hundred years old, with the highest position of “President.” One hundred and twenty years ago, this land was a mess of squabbling minor countries not unlike the feuding clan territory to the north, but it was united through conquest.
 
 - An ambitious young lady led her army from the east to the west and either killed or convinced each ruler she crossed to capitulate and join her growing republic.
-- She did not treat her fallen enemies cruely, outlawed slavery altogether, and encouraged mixing cultures and people to unify the people.
+- She did not treat her fallen enemies with cruelty, outlawed slavery altogether, and encouraged mixing cultures and people to unify the people.
 - When she had conquered enough, she wrote that she should be succeeded through election, and died 6 years thereafter. Every president since has had a single 6 year term, elected as currently through convention.
+- Each town is part of a “region,” which is part of a “territory,” which is part of the Croft Republic. Regional and territorial administrative officials are elected by locals or appointed by the president, and regional and territorial leaders elect the president.
+- The President is practically a King for their years in office, except when their decisions are overruled by more than half of the territorial leaders in peacetime. In wartime, they have supreme power.
 
 #### Geography
 
@@ -537,29 +547,33 @@ A young democratic republic, only a hundred years old, with the highest position
 
 ##### Names
 
-- 
+- Naming conventions vary by cultural origin, but everyone has at least a first and last name.
 
 ##### Earning
 
-- 
+- Most people work the same job as their parents did, or better jobs, such as in business or for the government, if they're better educated. The military is large and pays well, but it isn't a place you can work forever.
 
 ##### Learning
 
-- 
+- There are public school partly funded by taxes, but which still require some tuition to attend.
+- Skilled crafts are often passed from parent to child.
 
 ##### Style
 
-- 
+- Fashion is busy, a mix of the various styles around the republic mixed together.
+- Buildings, too, are often closely packed and highly decorated with cultural art.
+- Paintings and sculptures are highly regarded here.
 
 ##### Language
 
-- 
-  - Riven is an agglutinative subject-object-verb language, and its words tend to be one to three syllables.
-  - It’s written either of two ways, logographic or phonetic scripts. The logograms depict a wide variety of images, similar to hieroglyphs. The phonetic script looks like a long and decorated line of ink, such as tibetan or arabic scripts. Both are written with quill, or carved into clay or stone.
+- The Republic has an official language, Bong, which everyone in it speaks in addition to the languages they inherit from their families.
+  
+  - Bong is a highly regular inflected subject-object-verb language, and its words can get up to 7 syllables long.
+  - It's written with a simple alphabet, one letter per consonant or vowel, either carved into stone or clay, or with quill and ink.
 
 ##### Stereotypes
 
-- 
+- Their people are often stereotyped as being generous and romantic.
 
 ### Potential Conflict
 
