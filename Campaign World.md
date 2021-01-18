@@ -1,15 +1,17 @@
-# Welcome... to The World!
+# Welcome... to [The World]!
 
 ### Who's Interested?
 
-1. Cy
-2. Souleymane
-3. Greg
-4. LePear
-5. Trent
-6. Alex
-7. bloosie
-8. Inspire
+1. Ellie
+2. Cy
+3. Joseph
+4. Souleymane
+5. bloosie
+6. LePear
+7. Inspire
+8. Alex
+9. Greg
+10. Trent
 
 ### Preliminary Map:
 
@@ -317,7 +319,7 @@ History checks can be emphasized in this country to follow the customs and tradi
 
 #### Culture
 
-> In Rive, money can buy everything but happiness, and gold and gems flow like water.
+> 
 
 ##### Child Rearing
 
@@ -729,81 +731,83 @@ The current princess, —–, is young and full of energy, and her father fully 
 
 ##### Borders
 
-- 
+- Mondra to the northwest, the Croft Republic to the northeast, and the Austere Empire across the water to the East.
 
 ##### Biomes
 
-- 
+- A small temperate rainforest to the northeast at the corner of the border with the Croft Republic, but otherwise largely temperate forests in the south by the bay, and grasslands further inland at higher elevations.
 
 ##### Weather patterns
 
-- 
+- The climate is warm near the coast down south, but further north at higher elevations the temperatures average near freezing, and rainfall is light all across the kingdom.
 
 #### Population
 
 ##### Total Population
 
-- 
+- 8 Million
 
 ##### Life Expectancy
 
+- 35 Male, 38 Female
 - 
 
 ##### Average Children per Family
 
-- 
+- 2.
+- Average of 6 or 7 births, but it's hard to survive childhood.
 
 ##### Population Density
 
-- 
+- 41% urban, 20% suburban, 39% rural
 
 ##### Religious Beliefs
 
-- 
+- 94% official religion, 2% pagan, 1% agnostic, 3% atheist
 
 #### Military
 
 ##### Maximum Military Manpower
 
-- 
+- 5% of population
 
 ##### Treaties and Agreements
 
-- 
+- Defensive pact with the Croft Republic, Mondra
 
 ##### Military Equipment
 
-- 
+- Out-dated and ineffective
 
 ##### Military Service Requirements
 
-- 
+- Voluntary service for adults
 
 #### Economy
 
 ##### Unemployment Rate
 
-- 
+- 43%
 
 ##### Poverty Rate
 
-- 
+- 95%
 
 ##### Literacy Rate
 
-- 
+- 13%
 
 ##### Technological Capability
 
-- 
+- Average
 
 ##### Natural Resources
 
-- 
+- Sapphire, iron, tin, grain crops, grazing livestock, lumber
 
 ##### Currency
 
-- 
+- 1 Gold = 10 Silver = 100 Copper = 37.5 Blic = 50 Strata = 139.13 mon
 
 #### Culture
 
@@ -1106,11 +1110,21 @@ For normal people, it may be said that "upon the event of your death, you are de
 
 ### Potential Conflict
 
+Don't trust the floating island
 
+People on the ground don't do well
+
+They don't even know how to farm
+
+They get cannibalized all the time
 
 ---
 
 ## Rizeli
+
+> A young empire, an annihilation arc, an ambition to conquer the world? Using robot zombies?
+>
+> The players could discover a conspiracy right at the beginning to overthrow the current dynasty. The cult might try to kill them, but a court wizard could save their lives and tp them across the world to save their lives.
 
 #### Geography
 
