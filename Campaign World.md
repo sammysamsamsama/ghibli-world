@@ -4,12 +4,12 @@
 
 1. Ellie
 2. Cy
-3. Joseph
-4. Souleymane
+3. Souleymane
 5. bloosie
-6. LePear
-7. Inspire
-8. Alex
+6. Inspire
+8. LePear
+7. Alex
+8. Joseph
 9. Greg
 10. Trent
 
@@ -1124,9 +1124,11 @@ They get cannibalized all the time
 
 ## Rizeli
 
-> A young empire, an annihilation arc, an ambition to conquer the world? Using robot zombies?
->
-> The players could discover a conspiracy right at the beginning to overthrow the current dynasty. The cult might try to kill them, but a court wizard could save their lives and tp them across the world to save their lives.
+> A young but powerful empire, 
+
+A young empire, an annihilation arc, an ambition to conquer the world? Using robot zombies?
+
+The players could discover a conspiracy right at the beginning to overthrow the current dynasty. The cult might try to kill them, but a court wizard could save their lives and tp them across the world to save their lives.
 
 #### Geography
 
