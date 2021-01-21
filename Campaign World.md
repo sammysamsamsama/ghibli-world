@@ -4,20 +4,21 @@
 
 1. Ellie
 2. Cy
+   - less fetch quests
 3. Souleymane
-5. bloosie
-6. Inspire
-8. LePear
-7. Alex
-8. Joseph
-9. Greg
-10. Trent
+4. bloosie
+5. Inspire
+6. LePear
+7. Joseph
+8. Alex
+9. Trent
+10. Greg
 
 ### Preliminary Map:
 
-![img](https://lh6.googleusercontent.com/oIW9NqC7drTaE7cv_VCg2UyOGdV_XCXrjLVBxO5hM12x1MhI1yr6Fi8_6gyqEGOuhmYTYSrQ4UIBAmhQa5SQty2I_sL35sb0PQvVUEHPMrBbtcgLziq6lZhrpH-T4siNXUIBC09o)![img](https://lh3.googleusercontent.com/C1ZfU5J6dSMclNz-JB0jpfwns84jvY8ZXpP7pVxAq5BNHYe1Kz8d7XSj7UyvPOoY7-BtvMKokAsw-i7dcwD9MPED0ZJGiFesE1F3Ins8kVoqCgpQM_Jvet6BwqylUEwfPn2bgQsK)![img](https://lh5.googleusercontent.com/p_iWvU7lffAFIzqmYETldoui5CuN_7F4gThvTC-YNvxWo13KRVBqi2v-F_0hpR6Nz5KHu4UdiIHn6-E8uYrHK8PJnOPycYDau9UT_xTpjQXRFmqP2yD0zOWQ46pgGeJzVollj83e)
+![img](https://lh6.googleusercontent.com/oIW9NqC7drTaE7cv_VCg2UyOGdV_XCXrjLVBxO5hM12x1MhI1yr6Fi8_6gyqEGOuhmYTYSrQ4UIBAmhQa5SQty2I_sL35sb0PQvVUEHPMrBbtcgLziq6lZhrpH-T4siNXUIBC09o)![img](https://lh3.googleusercontent.com/C1ZfU5J6dSMclNz-JB0jpfwns84jvY8ZXpP7pVxAq5BNHYe1Kz8d7XSj7UyvPOoY7-BtvMKokAsw-i7dcwD9MPED0ZJGiFesE1F3Ins8kVoqCgpQM_Jvet6BwqylUEwfPn2bgQsK![img](https://lh5.googleusercontent.com/p_iWvU7lffAFIzqmYETldoui5CuN_7F4gThvTC-YNvxWo13KRVBqi2v-F_0hpR6Nz5KHu4UdiIHn6-E8uYrHK8PJnOPycYDau9UT_xTpjQXRFmqP2yD0zOWQ46pgGeJzVollj83e)
 
-![image-20210117233021384](C:\Users\sammy\AppData\Roaming\Typora\typora-user-images\image-20210117233021384.png)
+![image-20210117233021384](C:\Users\sammy\Desktop\ghibli-world\resources\Inkhora.png)
 
 ### BASIC HISTORY:
 
@@ -805,7 +806,7 @@ The current princess, —–, is young and full of energy, and her father fully 
 
 ##### Natural Resources
 
-- Sapphire, iron, tin, grain crops, grazing livestock, lumber
+- Sapphire, silver, iron, tin, grain crops, grazing livestock, lumber
 
 ##### Currency
 
@@ -1124,7 +1125,7 @@ They get cannibalized all the time
 
 ## Rizeli
 
-> A young but powerful empire, 
+> A young but powerful empire, Rizeli stretches from its border with Eruditia to the western tip of the continent. It was consolidated only thirty-five years ago, and its people are still unused to .
 
 A young empire, an annihilation arc, an ambition to conquer the world? Using robot zombies?
 
@@ -1152,29 +1153,32 @@ The players could discover a conspiracy right at the beginning to overthrow the 
 
 ##### Total Population
 
-- 
+- 9.8 Million
 
 ##### Life Expectancy
 
-- 
+- 36
 
 ##### Average Children per Family
 
-- 
+- 2 or 3
 
 ##### Population Density
 
-- 
+- 22% urban, 30% suburban, 48% rural
 
 ##### Religious Beliefs
 
-- 
+- 40% Major religion
+- 30% Pagan
+- 20% Agnostic
+- 10% Atheist
 
 #### Military
 
 ##### Maximum Military Manpower
 
-- 
+- 18% of population
 
 ##### Treaties and Agreements
 
@@ -1182,37 +1186,37 @@ The players could discover a conspiracy right at the beginning to overthrow the 
 
 ##### Military Equipment
 
-- 
+- modern and maintained
 
 ##### Military Service Requirements
 
-- 
+- adult volunteers
 
 #### Economy
 
 ##### Unemployment Rate
 
-- 
+- 15%
 
 ##### Poverty Rate
 
-- 
+- 90%
 
 ##### Literacy Rate
 
-- 
+- 15%
 
 ##### Technological Capability
 
-- 
+- Average
 
 ##### Natural Resources
 
-- 
+- Lumber, fertile farmland, grain crops, coal, medicinal compounds
 
 ##### Currency
 
-- 
+- 1 Gold = 10 Silver = 100 Copper = 125 Reverie Copper
 
 #### Culture
 
@@ -1253,6 +1257,8 @@ The players could discover a conspiracy right at the beginning to overthrow the 
 ---
 
 ## Monstadt
+
+> A land of untamed magic, Monstadt remains nearly untouched by human civilization. An area roughly the size of the Philippines is covered in an enchanted wilderness from which few return. Those who do story tricky fairy courts and great magical beasts.
 
 #### Geography
 
