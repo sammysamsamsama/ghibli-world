@@ -8,11 +8,11 @@
 3. Souleymane
 4. bloosie
 5. Inspire
-6. LePear
-7. Joseph
-8. Alex
-9. Trent
-10. Greg
+6. Greg
+7. LePear
+8. Joseph
+9. Alex
+10. Trent
 
 ### Preliminary Map:
 
